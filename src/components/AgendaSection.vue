@@ -461,14 +461,20 @@ const toggleExpand = (index) => {
 }
 
 @media (max-width: 768px) {
+  .session-info {
+    padding: 0 20px;
+  }
   .session-info-body {
     flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
+  }
+  .session-info-content {
+    padding-left: 0;
+    border-left: none;
   }
   .session-info-producers {
     flex: none;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
   .session-info-title {
     font-size: 22px;
@@ -480,6 +486,9 @@ const toggleExpand = (index) => {
 }
 
 @media (max-width: 480px) {
+  .session-info {
+    padding: 0 12px;
+  }
   .session-info-title {
     font-size: 20px;
   }
