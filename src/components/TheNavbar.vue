@@ -6,16 +6,49 @@ const scrolled = ref(false)
 const pastFirstScreen = ref(false)
 const mobileMenuOpen = ref(false)
 const pastDropdownOpen = ref(false)
+let scrollTimer = null
+let isAutoScrolling = false
 
 const handleScroll = () => {
   scrolled.value = window.scrollY > 60
   pastFirstScreen.value = window.scrollY > window.innerHeight * 0.8
+  if (!isAutoScrolling) {
+    clearTimeout(scrollTimer)
+    scrollTimer = setTimeout(updateHashByScroll, 100)
+  }
+}
+
+const updateHashByScroll = () => {
+  const sections = navItems.map(item => ({ id: item.anchor, el: document.getElementById(item.anchor) }))
+  const viewportCenter = window.scrollY + window.innerHeight / 2
+  let closest = null
+  let closestDist = Infinity
+  for (const s of sections) {
+    if (!s.el) continue
+    const top = s.el.offsetTop
+    const bottom = top + s.el.offsetHeight
+    if (viewportCenter >= top && viewportCenter <= bottom) {
+      closest = s.id
+      break
+    }
+    const dist = Math.min(Math.abs(top - viewportCenter), Math.abs(bottom - viewportCenter))
+    if (dist < closestDist) {
+      closestDist = dist
+      closest = s.id
+    }
+  }
+  if (closest && window.location.hash !== `#${closest}`) {
+    history.replaceState(null, '', `#${closest}`)
+  }
 }
 
 const scrollTo = (anchor) => {
   const el = document.getElementById(anchor)
   if (el) {
+    isAutoScrolling = true
     el.scrollIntoView({ behavior: 'smooth' })
+    history.replaceState(null, '', `#${anchor}`)
+    setTimeout(() => { isAutoScrolling = false }, 800)
   }
   mobileMenuOpen.value = false
 }

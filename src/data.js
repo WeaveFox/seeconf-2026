@@ -29,6 +29,7 @@ export const sessions = [
     isLive: true,
     color: '#f3584c',
     producers: [{ name: '达峰', title: '蚂蚁集团 · 平台体验技术负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fckbRapByFQAAAAAUKAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VWIITqdL1_oAAAAAUxAAAAgADiiDAQFr/original' }],
+    description: ''
   },
   {
     id: 'ai-experience',
@@ -73,7 +74,7 @@ export const sessions = [
     color: '#f3584c',
     producers: [
       { name: '黄挺（鲁直）', title: '蚂蚁集团 · 平台技术事业群总架构师', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/k5u5QK0pGkoAAAAARmAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/mhrQT7zwAjsAAAAAR3AAAAgADiiDAQFr/original' },
-      { name: '徐达峰（达峰）', title: '蚂蚁集团 · 平台体验技术部负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fckbRapByFQAAAAAUKAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VWIITqdL1_oAAAAAUxAAAAgADiiDAQFr/original' },
+      { name: '徐达峰（达峰）', title: '蚂蚁集团 · 平台体验技术部负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fckbRapByFQAAAAAUKAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Ag4uRLU4660AAAAARxAAAAgADiiDAQFr/original' },
     ],
     description: '从技术周期来看，AI 处于发展的早期，许多可能尚是 Undefined，许多习以为常的事物也等待被 Redefine。SEE Next 场不做预设，基于出品人的调性和判断，寻找值得看见的人、作品与想法，在尚无定论的地方，探索新的可能。',
     infoImage: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/yPHWTYNxEu4AAAAAZQAAAAgADiiDAQFr/original',
@@ -84,13 +85,13 @@ export const sessions = [
 export const agendaData = {
   main: [
     {
-      time: '',
+      time: '9:30 - 9:40',
       title: '开场致辞',
       description: '',
-      speaker: '谦持',
-      speakerTitle: '',
-      avatarBlue: '',
-      avatarRed: '',
+      speaker: '骆骥（谦持）',
+      speakerTitle: '蚂蚁集团 · 平台技术事业群总裁',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/nARtQ6mEjPkAAAAARaAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VCSKR6_0VZMAAAAASRAAAAgADiiDAQFr/original',
     },
     {
       time: '10:00 - 10:20',
@@ -227,7 +228,7 @@ export const agendaData = {
       title: 'Agent 重构组织协作：从人机接力到全链路自动化',
       description: 'AI 写代码越来越快，团队怎样才能交付得更快、更好？本次分享将结合真实业务案例，带你理解"自动化滑块"的实践方法：围绕不同场景选择合适的自动化程度，把 Agent 的能力转化为团队整体的交付提速。你将看到，团队如何从局部尝试走向更大范围的自动化，并根据 Agent 能力升级和业务实践持续调整，让自动化融入日常研发，逐步构建一座越用越强的 AI 软件工厂。',
       speaker: '王建明（涧鸣）',
-      speakerTitle: '蚂蚁集团 · 前端技术专家',
+      speakerTitle: '蚂蚁集团 · 技术专家',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/pzNmR4IlF2sAAAAARgAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/FWLOS5_VqukAAAAARfAAAAgADiiDAQFr/original',
     },

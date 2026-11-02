@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { sessions, agendaData } from '../data.js'
 
 const activeSession = ref('main')
@@ -84,7 +84,31 @@ const getBadgeClass = (localIndex) => {
 
 const selectSession = (id) => {
   activeSession.value = id
+  if (history.replaceState) {
+    history.replaceState(null, '', `#agenda-${id}`)
+  }
 }
+
+const handleHashChange = () => {
+  const hash = window.location.hash
+  if (hash.startsWith('#agenda-')) {
+    const id = hash.slice(7)
+    if (sessions.some(s => s.id === id)) {
+      activeSession.value = id
+      const el = document.getElementById(`agenda-${id}`)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
+}
+
+onMounted(() => {
+  handleHashChange()
+  window.addEventListener('hashchange', handleHashChange)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('hashchange', handleHashChange)
+})
 
 const isLongDesc = (item) => item.description && item.description.length >= 100
 
@@ -118,6 +142,7 @@ const toggleExpand = (index) => {
         <div
           v-for="(session, index) in sessions"
           :key="session.id"
+          :id="`agenda-${session.id}`"
           class="session-card"
           :class="{ active: activeSession === session.id }"
           :style="{ '--card-bg': `url(${getCardBg(index)})` }"
@@ -131,7 +156,7 @@ const toggleExpand = (index) => {
       </div>
 
       <!-- 专题描述 + 出品人信息 -->
-      <div v-if="currentSession.description" class="session-info">
+      <div v-if="currentSession.description || (currentSession.producers && currentSession.producers.length)" class="session-info">
         <div class="session-info-body">
           <div class="session-info-producers">
             <h3 class="session-info-title">出品人</h3>
@@ -150,7 +175,7 @@ const toggleExpand = (index) => {
               </div>
             </div>
           </div>
-          <div class="session-info-content">
+          <div v-if="currentSession.description" class="session-info-content">
             <p class="session-info-desc">{{ currentSession.description }}</p>
           </div>
         </div>
@@ -346,18 +371,6 @@ const toggleExpand = (index) => {
 /* 专题描述 + 出品人信息 */
 .session-info {
   margin-bottom: 32px;
-  padding-bottom: 32px;
-  position: relative;
-}
-
-.session-info::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 36px;
-  right: 0;
-  height: 1px;
-  background: #e0e0e0;
 }
 
 .session-info-body {
