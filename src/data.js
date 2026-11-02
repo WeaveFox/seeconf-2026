@@ -89,8 +89,8 @@ export const agendaData = {
       description: '',
       speaker: '项臻（泽西）',
       speakerTitle: '镭萌科技联合创始人',
-      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/sqW-S47sa-AAAAAARXAAAAgADiiDAQFr/original',
-      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/qowHTo117bgAAAAARjAAAAgADiiDAQFr/original',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/RGeySYNiY6MAAAAARXAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/7V04S7YxSsgAAAAARjAAAAgADiiDAQFr/original',
     },
     {
       time: '14:50 - 15:15',
@@ -125,8 +125,8 @@ export const agendaData = {
       description: '',
       speaker: 'Aute',
       speakerTitle: 'ego(lite) Founder',
-      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/-rc2Qrf_ZEYAAAAARgAAAAgADiiDAQFr/original',
-      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/yl5nTpIyXRoAAAAARgAAAAgADiiDAQFr/original',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/2HiaRpLC_g0AAAAARgAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fJXJQK8Fo3wAAAAARgAAAAgADiiDAQFr/original',
     },
     {
       time: '16:45 - 17:10',
@@ -134,8 +134,8 @@ export const agendaData = {
       description: '如何让设计师积累的专业经验，成为更多人可以使用的创作能力，并推动业务想法快速落地？本次分享将以 TaoDesign 在淘天电商场景中的探索为例，介绍如何将设计师的经验与方法沉淀为 AI 可理解、可调用的设计资产，通过使用反馈与持续评估推动资产自进化；如何让 AI 工具运用这些资产，帮助专业人士提升创作效率，让非设计专业人士也能表达、验证想法，拓展职能边界；以及如何将 AI 创作的设计稿连接到需求表达、方案确认、研发实现与验收交付，贯通电商企业的需求交付流程。为设计、产品与研发团队提供从经验沉淀到业务交付的实践参考。',
       speaker: '刘晨凌（卓凌）',
       speakerTitle: '阿里巴巴 · 淘天集团 AI 研发工程师',
-      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/UMoYTZ6UpJsAAAAARRAAAAgADiiDAQFr/original',
-      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/lZbtRpCfxQEAAAAARVAAAAgADiiDAQFr/original',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/x0F0TYTa3RUAAAAARRAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/_JY1SIF8YI0AAAAARVAAAAgADiiDAQFr/original',
     },
   ],
   'ai-engineering': [
@@ -162,7 +162,7 @@ export const agendaData = {
       title: 'nanoMuse: Personal Agent 的系统架构与算法实践',
       description: '随着多模态大模型的演进，终端智能应用的形态正从单轮问答窗口转向长期驻留、跨设备协同、可自主操作真实应用的个人智能体（Personal Agent）。本次分享将围绕开源个人智能体 nanoMuse 的系统架构与核心算法展开：在系统层，介绍跨安卓、iOS、桌面与网页端的多端协同架构、屏幕操作与安全管控实践；在算法层，介绍如何通过少量人类示范提取可复用知识以解决长尾冷启动、如何将历史折叠与状态维护内化为模型自身的强化学习动作以治理长程上下文膨胀，以及如何在无人工标注下通过自主探索与分层反馈适应应用演进。',
       speaker: '刘广义',
-      speakerTitle: '浙江大学 APRIL 实验室博士生',
+      speakerTitle: '浙江大学 · APRIL 实验室博士生',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/p0x6Sby3fmIAAAAAReAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/3L2DT5dpokkAAAAARjAAAAgADiiDAQFr/original',
     },
@@ -476,7 +476,7 @@ export const specialGuests = [
 // 特色展台
 export const exhibitions = [
   { name: '蚂蚁阿福', description: '你的 AI 健康朋友。', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Q86OQ455uroAAAAAS2AAAAgADiiDAQFr/256w_256h', link: '' },
-  { name: '', description: '灵光，能管事的个人助理。', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fgPETaAe-k8AAAAAcNAAAAgADiiDAQFr/fmt.avif', link: 'https://www.lingguang.com/' },
+  { name: '灵光', description: '灵光，能管事的个人助理。', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/HPFmQKfPO1oAAAAAQEAAAAgADiiDAQFr/original', link: 'https://www.lingguang.com/' },
   { name: '百灵', description: '为真实世界而生的开放智能。Open intelligence for the real-world.', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/lXz6Safe1GcAAAAAQWAAAAgADiiDAQFr/original', link: 'https://www.ant-ling.com/' },
   { name: '', description: '以创新的 AI 支付助力AI时代。Powering the AI Era with Innovative AI Payments.', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/JwfPSq2DBxQAAAAAQFAAAAgADiiDAQFr/original', link: 'https://aipay.alipay.com/' },
   { name: '阿宝', description: '作为 AI 版支付宝，阿宝是你的专属 Personal Agent 生活助手，现设立千万奖池发起智能体涌现奖大赛，旨在征集有用、有趣的生活消费智能体和 Agent、Skill，赋能开发者及其智能体作品商业潜力，落地支付宝生态。', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/hpbmSKcqrngAAAAAgEAAAAgADiiDAQFr/512w_512h', link: 'https://abaoemerge.alipay.com' },
