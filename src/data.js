@@ -49,7 +49,7 @@ export const sessions = [
     subtitle: '卓越 AI 工程实践',
     color: '#12a7df',
     producers: [
-      { name: '陈成（云谦）', title: '淘天集团 · QoderCLI 高级技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/V9ZWRanRv3EAAAAARqAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/TdnPQ5x4K8MAAAAARoAAAAgADiiDAQFr/original' },
+      { name: '陈成（云谦）', title: '阿里巴巴 · QoderCLI 高级技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/V9ZWRanRv3EAAAAARqAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/TdnPQ5x4K8MAAAAARoAAAAgADiiDAQFr/original' },
       { name: '曹磊（明是）', title: '蚂蚁集团 · 技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/sy1XRrlnAbEAAAAASGAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/F1HdTpfKBTcAAAAAR4AAAAgADiiDAQFr/original' },
     ],
     description: '当下 AI 基础模型能力持续提升，真正的考验落在实际工程落地环节。从模型调优、推理部署到稳定上线、成本管控，每一环都考验扎实的工程能力。本专题聚焦一线落地的真实挑战，避开纸面理论，深入探讨研发范式重塑、复杂 Agent 系统架构与线上 Badcase 稳定性治理。从工具链革新到客户端工程落地，分享来自蚂蚁、阿里、字节及高校团队的专家经验，解析如何用工程手段让 AI 跑通业务闭环，帮助从业者把 AI 从 Demo 原型推向高质量上线，真正跑起来、用起来、产生价值。',
@@ -174,7 +174,7 @@ export const agendaData = {
       title: '一天一版的工程密码：QoderCLI 如何重塑研发范式',
       description: '',
       speaker: '姜子玥（安枝）',
-      speakerTitle: '淘天集团 · QoderCLI 技术专家',
+      speakerTitle: '阿里巴巴 · QoderCLI 技术专家',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/2OLiRK6BCFQAAAAAU4AAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/17-BS6l1WDsAAAAAVLAAAAgADiiDAQFr/original',
     },
@@ -257,7 +257,7 @@ export const agendaData = {
       title: '从 cnpm 到 Vite+：AI 时代的开发者体验演进',
       description: '从 cnpm 到 Vite+，"快"始终是开发者体验的核心追求：从让依赖安装更快，到让整个 Web 开发工具链尽可能地快。随着 AI 深入参与开发，提速的空间也从单个工具延伸到了整个工作流程。本次分享将以 cnpm 和 Vite+ 的研发实践为线索，回顾开发者工具的演进，介绍 Vite+ 在性能、工具链整合与自动化方面的设计，并通过实际工程案例，探讨开发工具如何更好地服务开发者与 AI，减少重复工作、缩短反馈周期，让开发既高效又可靠。',
       speaker: '袁锋（苏千）',
-      speakerTitle: 'Vite+ 工程师',
+      speakerTitle: 'VoidZero 软件工程师',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/1lpsRqpGsBoAAAAARdAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/pZkfTKiqoUoAAAAARmAAAAgADiiDAQFr/original',
     },
@@ -497,7 +497,7 @@ export const specialGuests = [
   {
     name: '夏炎',
     nickname: '莫非',
-    title: '淘天集团 · 资深技术专家',
+    title: '阿里巴巴 · 资深技术专家',
     avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Sld-RLjH_-oAAAAATPAAAAgADiiDAQFr/original',
     avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/_TMuQ5A9mG0AAAAAVaAAAAgADiiDAQFr/original'
   },
