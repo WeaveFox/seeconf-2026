@@ -254,7 +254,7 @@ export const agendaData = {
       title: 'AVA, AI-Native Visual Analytics, Built for Data Agent',
       description: '"净销售额下降了，是否应该加大广告投放？"面对这样的业务问题，Data Agent 如何理解业务指标、探索数据、分析原因，并提供可信的决策依据？本次分享将结合 AntV AVA 的设计与 Sive 数据分析 Agent 的建设实践，围绕数据上下文构建、分析策略与 Benchmark 评测、异构数据源统一执行及智能可视化，拆解从自然语言到分析结论的关键技术链路，并通过真实评测数据与工程案例，探讨分析准确性、Agent 自主性与执行效率之间的设计取舍。',
       speaker: '朱禹歆（半璇）',
-      speakerTitle: '蚂蚁集团 · 可视化工程师',
+      speakerTitle: '蚂蚁集团 · AntV 可视化工程师',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/rU0vQ79rhvAAAAAAR8AAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/ChCtTrG_BPoAAAAASZAAAAgADiiDAQFr/original',
     },
