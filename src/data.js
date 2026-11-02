@@ -172,8 +172,8 @@ export const agendaData = {
       description: '蚂蚁阿福上线后，随着用户量增长，线上 badcase 持续增加，依赖人工串联全链路的处理模式已难以应对。为此，我们分两阶段推进：先通过 Harness Engineering 为 Agent 接入开发、部署和评测工具，结合执行与评测约束实现自主修复与验证；再通过 Loop Engineering 将流程组织为"内循环（修复、验证）"与"外循环（发现、归因、分派、回流）"，仅保留异常改派和上线由人工把关。本次分享将结合真实案例，完整展示 badcase 入池、分派、修复与验证的演进实践及人机边界。',
       speaker: '肖汉松（萧恺）',
       speakerTitle: '蚂蚁集团 · 阿福 Harness 架构组负责人',
-      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/k8spS7vl5-cAAAAARkAAAAgADiiDAQFr/original',
-      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/j4bwTqmARpcAAAAARxAAAAgADiiDAQFr/original',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/aoRoR63nU-sAAAAARjAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/aoRoR63nU-sAAAAARjAAAAgADiiDAQFr/original',
     },
     {
       time: '15:40 - 15:55',
