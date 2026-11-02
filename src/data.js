@@ -242,7 +242,7 @@ export const agendaData = {
     },
     {
       time: '14:50 - 15:15',
-      title: '从草案到大规模实践：MoQ/RTQ在AI多模态实时交互中的落地',
+      title: '从草案到大规模实践：MoQ/RTQ 在 AI 多模态实时交互中的落地',
       description: '如何让新一代媒体传输协议跟上 AI 多模态实时交互对低延迟、可靠性和多端一致体验的要求，并让 IETF 草案阶段的 MoQ 真正走向大规模生产落地？本次分享将以 MoQ/RTQ 在 AI 语音助手、实时数字人、多模态 Agent 等交互场景中的实践为例，介绍如何基于 XQUIC 落地 Media over QUIC，用 0-RTT、FEC、目录协商、码率自适应与时间同步等能力把端到端建连与传输延迟压至百毫秒级，让 AI 会话获得"开口即响应"的体验，为实时打断、连续对话等交互范式提供传输层保障',
       speaker: '彭玉堂（巴格）',
       speakerTitle: '淘天集团 · 高级技术专家',
@@ -296,7 +296,7 @@ export const agendaData = {
     },
     {
       time: '17:10 - 17:35',
-      title: '多模态 AI 交互-蚁小保VUI',
+      title: '多模态 AI 交互-蚁小保 VUI',
       description: '蚁小保 VUI 是融入用户现场的多模态 AI 保险助手，通过实时语音、同屏理解与视频交互，结合前后台 Agent 协同，让用户边说、边看、边办，将理解场景、组织信息的复杂性交给 AI，降低提问与沟通负担，打造少解释、更自然、有陪伴感的保险服务体验。',
       speaker: '郁玉涛（郁哉）',
       speakerTitle: '蚂蚁集团 · 蚁小保VUI端侧负责',

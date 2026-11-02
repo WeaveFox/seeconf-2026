@@ -321,7 +321,6 @@ const toggleExpand = (index) => {
 .timeline {
   position: relative;
   padding: 24px 40px 24px 72px;
-  border: 1px solid #d0d0d0;
   border-radius: 20px;
 }
 
