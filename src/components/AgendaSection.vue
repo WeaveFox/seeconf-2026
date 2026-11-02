@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { sessions, agendaData } from '../data.js'
 
 const activeSession = ref('main')
@@ -36,6 +36,10 @@ const globalOffset = computed(() => {
 
 const currentAgenda = computed(() => {
   return agendaData[activeSession.value] || []
+})
+
+const currentSession = computed(() => {
+  return sessions.find(s => s.id === activeSession.value) || {}
 })
 
 // 没有头像的条目不参与红蓝交替计数
@@ -80,7 +84,31 @@ const getBadgeClass = (localIndex) => {
 
 const selectSession = (id) => {
   activeSession.value = id
+  if (history.replaceState) {
+    history.replaceState(null, '', `#agenda-${id}`)
+  }
 }
+
+const handleHashChange = () => {
+  const hash = window.location.hash
+  if (hash.startsWith('#agenda-')) {
+    const id = hash.slice(7)
+    if (sessions.some(s => s.id === id)) {
+      activeSession.value = id
+      const el = document.getElementById(`agenda-${id}`)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
+}
+
+onMounted(() => {
+  handleHashChange()
+  window.addEventListener('hashchange', handleHashChange)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('hashchange', handleHashChange)
+})
 
 const isLongDesc = (item) => item.description && item.description.length >= 100
 
@@ -114,6 +142,7 @@ const toggleExpand = (index) => {
         <div
           v-for="(session, index) in sessions"
           :key="session.id"
+          :id="`agenda-${session.id}`"
           class="session-card"
           :class="{ active: activeSession === session.id }"
           :style="{ '--card-bg': `url(${getCardBg(index)})` }"
@@ -122,10 +151,32 @@ const toggleExpand = (index) => {
           <div class="session-card-overlay">
             <p class="session-type">{{ session.name }}</p>
             <h3 class="session-subtitle">{{ session.subtitle }}</h3>
-            <p class="session-producers">
-              <span class="producers-label">出品人</span>
-              <span class="producers-names">{{ session.producers.join(' / ') }}</span>
-            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 专题描述 + 出品人信息 -->
+      <div v-if="currentSession.description || (currentSession.producers && currentSession.producers.length)" class="session-info">
+        <div class="session-info-body">
+          <div class="session-info-producers">
+            <h3 class="session-info-title">出品人</h3>
+            <div class="session-info-producers-list">
+              <div v-for="(producer, pi) in currentSession.producers" :key="pi" class="producer-item">
+                <img
+                  v-if="producer.avatarBlue || producer.avatarRed"
+                  class="producer-avatar"
+                  :src="(pi % 2 === 0 ? producer.avatarBlue : producer.avatarRed) || producer.avatarBlue || producer.avatarRed"
+                  alt="出品人头像"
+                />
+                <div class="producer-meta">
+                  <strong>{{ producer.name }}</strong>
+                  <span>{{ producer.title }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div v-if="currentSession.description" class="session-info-content">
+            <p class="session-info-desc">{{ currentSession.description }}</p>
           </div>
         </div>
       </div>
@@ -221,7 +272,7 @@ const toggleExpand = (index) => {
 }
 
 .session-card {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   border-radius: 20px;
   background-image: var(--card-bg);
   background-size: cover;
@@ -317,18 +368,137 @@ const toggleExpand = (index) => {
   color: var(--color-text-secondary);
 }
 
+/* 专题描述 + 出品人信息 */
+.session-info {
+  margin-bottom: 32px;
+}
+
+.session-info-body {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.session-info-producers {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.session-info-producers-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.session-info-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  border-left: 1px solid #e0e0e0;
+}
+
+.session-info-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0;
+  position: relative;
+  padding-left: 16px;
+}
+
+.session-info-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--color-text);
+}
+
+.session-info-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.producer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.producer-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.producer-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.producer-meta strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 4px;
+}
+
+.producer-meta span {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .session-info-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .session-info-producers {
+    flex: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .session-info-title {
+    font-size: 22px;
+  }
+  .session-info-desc {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .session-info-title {
+    font-size: 20px;
+  }
+  .session-info-desc {
+    font-size: 12px;
+  }
+}
+
 /* 纵向 timeline */
 .timeline {
   position: relative;
-  padding: 24px 40px 24px 72px;
-  border-radius: 20px;
+  padding: 0 0 0 72px;
 }
 
 .timeline-line {
   position: absolute;
   left: 36px;
-  top: 40px;
-  bottom: 40px;
+  top: 16px;
+  bottom: 16px;
   width: 0;
   border-left: 1px dashed #c0c0c0;
 }

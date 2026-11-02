@@ -3,7 +3,10 @@ import { conferenceInfo } from '../data.js'
 
 const scrollTo = (anchor) => {
   const el = document.getElementById(anchor)
-  if (el) el.scrollIntoView({ behavior: 'smooth' })
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
+    history.replaceState(null, '', `#${anchor}`)
+  }
 }
 
 const navColumns = [
