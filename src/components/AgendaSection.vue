@@ -16,11 +16,20 @@ const getCardBg = (index) => {
   return (index - 1) % 2 === 0 ? topicCardBg1 : topicCardBg2
 }
 
+const hasAvatar = (item) => {
+  const check = (v) => Array.isArray(v) ? v.length > 0 : !!v
+  return check(item.avatarBlue) || check(item.avatarRed)
+}
+
+const hasSpeaker = (item) => item.speaker || hasAvatar(item)
+
 const globalOffset = computed(() => {
   let count = 0
   for (const session of sessions) {
     if (session.id === activeSession.value) break
-    count += (agendaData[session.id] || []).length
+    for (const item of (agendaData[session.id] || [])) {
+      if (hasSpeaker(item)) count++
+    }
   }
   return count
 })
@@ -29,17 +38,44 @@ const currentAgenda = computed(() => {
   return agendaData[activeSession.value] || []
 })
 
-const getAvatar = (item, localIndex) => {
-  const isBlue = (globalOffset.value + localIndex) % 2 === 0
-  if (isBlue) {
-    return item.avatarBlue || avatarBlue
-  } else {
-    return item.avatarRed || avatarRed
+// 没有头像的条目不参与红蓝交替计数
+const speakerIndexMap = computed(() => {
+  const map = []
+  let count = 0
+  for (const item of currentAgenda.value) {
+    map.push(count)
+    if (hasSpeaker(item)) count++
   }
+  return map
+})
+
+const getAvatarList = (item, localIndex) => {
+  const speakerOffset = globalOffset.value + speakerIndexMap.value[localIndex]
+  const blueVal = item.avatarBlue
+  const redVal = item.avatarRed
+  const blueArr = Array.isArray(blueVal) ? blueVal : (blueVal ? [blueVal] : [])
+  const redArr = Array.isArray(redVal) ? redVal : (redVal ? [redVal] : [])
+  const maxLen = Math.max(blueArr.length, redArr.length)
+  if (maxLen === 0) {
+    return [speakerOffset % 2 === 0 ? avatarBlue : avatarRed]
+  }
+  // 多分享者头像交替蓝红色
+  const result = []
+  for (let i = 0; i < maxLen; i++) {
+    const isBlue = (speakerOffset + i) % 2 === 0
+    if (isBlue) {
+      result.push(blueArr[i] || redArr[i] || avatarBlue)
+    } else {
+      result.push(redArr[i] || blueArr[i] || avatarRed)
+    }
+  }
+  return result
 }
 
 const getBadgeClass = (localIndex) => {
-  return (globalOffset.value + localIndex) % 2 === 0 ? 'badge-blue' : 'badge-red'
+  const item = currentAgenda.value[localIndex]
+  if (!hasSpeaker(item)) return 'badge-break'
+  return (globalOffset.value + speakerIndexMap.value[localIndex]) % 2 === 0 ? 'badge-blue' : 'badge-red'
 }
 
 const selectSession = (id) => {
@@ -127,13 +163,16 @@ const toggleExpand = (index) => {
               </svg>
             </button>
           </div>
-          <div v-if="item.speaker || item.avatarBlue || item.avatarRed" class="timeline-guest">
-            <img
-              v-if="item.avatarBlue || item.avatarRed"
-              class="guest-avatar"
-              :src="getAvatar(item, index)"
-              alt="嘉宾头像"
-            />
+          <div v-if="hasSpeaker(item)" class="timeline-guest">
+            <div v-if="hasAvatar(item)" class="guest-avatars">
+              <img
+                v-for="(avatarUrl, avatarIdx) in getAvatarList(item, index)"
+                :key="avatarIdx"
+                class="guest-avatar"
+                :src="avatarUrl"
+                alt="嘉宾头像"
+              />
+            </div>
             <div class="guest-meta">
               <strong>{{ item.speaker }}</strong>
               <span v-if="item.speakerTitle">{{ item.speakerTitle }}</span>
@@ -332,6 +371,11 @@ const toggleExpand = (index) => {
   box-shadow: 0 0 0 4px rgba(249, 11, 13, 0.12);
 }
 
+.badge-break {
+  background: #d5e99f;
+  box-shadow: 0 0 0 4px rgba(213, 233, 159, 0.25);
+}
+
 .timeline-content {
   flex: 1;
 }
@@ -405,12 +449,26 @@ const toggleExpand = (index) => {
   gap: 34px;
 }
 
+.guest-avatars {
+  display: flex;
+  flex-shrink: 0;
+}
+
 .guest-avatar {
   width: 160px;
   height: auto;
   border-radius: 16px;
   object-fit: contain;
   flex-shrink: 0;
+  position: relative;
+}
+
+.guest-avatars .guest-avatar:not(:only-child) {
+  width: 130px;
+}
+
+.guest-avatars .guest-avatar:not(:first-child) {
+  margin-left: -30px;
 }
 
 .guest-meta {
@@ -535,6 +593,12 @@ const toggleExpand = (index) => {
     width: 120px;
     border-radius: 12px;
   }
+  .guest-avatars .guest-avatar:not(:only-child) {
+    width: 95px;
+  }
+  .guest-avatars .guest-avatar:not(:first-child) {
+    margin-left: -20px;
+  }
   .guest-meta {
     width: auto;
   }
@@ -573,6 +637,8 @@ const toggleExpand = (index) => {
   .timeline-title { font-size: 14px; }
   .timeline-desc { font-size: 12px; }
   .guest-avatar { width: 90px; border-radius: 10px; }
+  .guest-avatars .guest-avatar:not(:only-child) { width: 72px; }
+  .guest-avatars .guest-avatar:not(:first-child) { margin-left: -15px; }
   .guest-meta strong { font-size: 14px; }
   .guest-meta span { font-size: 11px; }
 }
