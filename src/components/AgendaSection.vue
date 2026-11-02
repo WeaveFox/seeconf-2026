@@ -132,19 +132,21 @@ const toggleExpand = (index) => {
 
       <!-- 专题描述 + 出品人信息 -->
       <div v-if="currentSession.description" class="session-info">
-        <h3 class="session-info-title">出品人</h3>
         <div class="session-info-body">
           <div class="session-info-producers">
-            <div v-for="(producer, pi) in currentSession.producers" :key="pi" class="producer-item">
-              <img
-                v-if="producer.avatarBlue || producer.avatarRed"
-                class="producer-avatar"
-                :src="(pi % 2 === 0 ? producer.avatarBlue : producer.avatarRed) || producer.avatarBlue || producer.avatarRed"
-                alt="出品人头像"
-              />
-              <div class="producer-meta">
-                <strong>{{ producer.name }}</strong>
-                <span>{{ producer.title }}</span>
+            <h3 class="session-info-title">出品人</h3>
+            <div class="session-info-producers-list">
+              <div v-for="(producer, pi) in currentSession.producers" :key="pi" class="producer-item">
+                <img
+                  v-if="producer.avatarBlue || producer.avatarRed"
+                  class="producer-avatar"
+                  :src="(pi % 2 === 0 ? producer.avatarBlue : producer.avatarRed) || producer.avatarBlue || producer.avatarRed"
+                  alt="出品人头像"
+                />
+                <div class="producer-meta">
+                  <strong>{{ producer.name }}</strong>
+                  <span>{{ producer.title }}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -365,20 +367,18 @@ const toggleExpand = (index) => {
 }
 
 .session-info-producers {
-  flex: 0 0 58%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.session-info-producers-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 20px;
   align-items: center;
-}
-
-.producers-heading {
-  width: 100%;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--color-text-secondary);
-  margin-bottom: 4px;
 }
 
 .session-info-content {
@@ -390,10 +390,10 @@ const toggleExpand = (index) => {
 }
 
 .session-info-title {
-  font-size: 28px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 800;
   color: var(--color-text);
-  margin: 0 0 20px 0;
+  margin: 0;
   position: relative;
   padding-left: 16px;
 }
