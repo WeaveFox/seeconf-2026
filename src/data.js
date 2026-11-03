@@ -86,7 +86,7 @@ export const agendaData = {
   main: [
     {
       time: '9:30 - 9:40',
-      title: '开场致辞',
+      title: '大会致辞',
       description: '',
       speaker: '骆骥（谦持）',
       speakerTitle: '蚂蚁集团 · 平台技术事业群总裁',
