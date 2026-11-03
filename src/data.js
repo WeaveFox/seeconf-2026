@@ -76,7 +76,7 @@ export const sessions = [
       { name: '黄挺（鲁直）', title: '蚂蚁集团 · 平台技术事业群总架构师', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/k5u5QK0pGkoAAAAARmAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/mhrQT7zwAjsAAAAAR3AAAAgADiiDAQFr/original' },
       { name: '徐达峰（达峰）', title: '蚂蚁集团 · 平台体验技术部负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fckbRapByFQAAAAAUKAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Ag4uRLU4660AAAAARxAAAAgADiiDAQFr/original' },
     ],
-    description: '从技术周期来看，AI 处于发展的早期，许多可能尚是 Undefined，许多习以为常的事物也等待被 Redefine。SEE Next 场不做预设，基于出品人的调性和判断，寻找值得看见的人、作品与想法，在尚无定论的地方，探索新的可能。',
+    description: '从技术周期来看，我们处于这一轮 AI 变革的早期，许多可能尚是 Undefined，许多习以为常的事物也等待被 Redefine。SEE Next 场不做预设，也不以既有分类限制选题。我们带着好奇与判断，寻找值得看见的人、作品与想法，分享真实的尝试与不同的视角，在尚无定论的地方，探索新的可能。',
     infoImage: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/yPHWTYNxEu4AAAAAZQAAAAgADiiDAQFr/original',
   },
 ]
