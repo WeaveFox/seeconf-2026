@@ -1,0 +1,14 @@
+src/data.js
+  h_10fc9938fe8725 79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "10476f72cd78bc8197e1859a1054fe6f4911e659",
+  "prompts": {},
+  "humans": {
+    "h_10fc9938fe8725": {
+      "author": "xudafeng <xudafeng@126.com>"
+    }
+  }
+}
