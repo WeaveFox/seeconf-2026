@@ -102,6 +102,15 @@ export const agendaData = {
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/kmU_Rp4e55MAAAAASNAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/7WiwTY5M2oQAAAAAR0AAAAgADiiDAQFr/original',
     },
+    {
+      time: '10:20 - 10:40',
+      title: 'AI 时代的端体验与创新',
+      description: '',
+      speaker: '李彦男（竹光）',
+      speakerTitle: '蚂蚁集团 · 支付宝终端引擎负责人',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/jfkCRqX7woIAAAAARlAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/aL-ZS4FAp1sAAAAAR7AAAAgADiiDAQFr/original',
+    },
   ],
   'ai-experience': [
     {
@@ -109,9 +118,9 @@ export const agendaData = {
       title: '从工具到伙伴 - 蚂蚁灵光的 AI Agent 实践',
       description: '分享蚂蚁灵光在 AI Agent 方向的一些思考和实践。',
       speaker: '杨诚（漠念）',
-      speakerTitle: '蚂蚁灵光产品经理',
+      speakerTitle: '蚂蚁集团 · 灵光产品经理',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/u0eUS6vbAtIAAAAARwAAAAgADiiDAQFr/original',
-      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/u0eUS6vbAtIAAAAARwAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/wOYURI-InNMAAAAASWAAAAgADiiDAQFr/original',
     },
     {
       time: '14:25 - 14:50',
@@ -344,15 +353,15 @@ export const agendaData = {
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/M5loTb7x7twAAAAARxAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/v8nqQapTJ4gAAAAASGAAAAgADiiDAQFr/original',
     },
-    // {
-    //   time: '14:25 - 14:50',
-    //   title: 'LobeHub',
-    //   description: '',
-    //   speaker: '徐文彬（闻冰）',
-    //   speakerTitle: 'LobeHub CEO',
-    //   avatarBlue: '',
-    //   avatarRed: '',
-    // },
+    {
+      time: '14:25 - 14:50',
+      title: 'AI Native 组织通往“无人驾驶”之路',
+      description: '',
+      speaker: '徐文彬（闻冰）',
+      speakerTitle: 'LobeHub 创始人 & CEO',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/DjrgR52TrgUAAAAAR6AAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/5fU_R6BXtu8AAAAARaAAAAgADiiDAQFr/original',
+    },
     // {
     //   time: '14:50 - 15:15',
     //   title: '敬请期待',
