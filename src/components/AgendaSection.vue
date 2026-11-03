@@ -156,33 +156,36 @@ const toggleExpand = (index) => {
       </div>
 
       <!-- 专题描述 + 出品人信息 -->
-      <div v-if="currentSession.description || (currentSession.producers && currentSession.producers.length)" class="session-info">
-        <div class="session-info-body">
-          <div class="session-info-producers">
-            <h3 class="session-info-title">出品人</h3>
-            <div class="session-info-producers-list">
-              <div v-for="(producer, pi) in currentSession.producers" :key="pi" class="producer-item">
-                <img
-                  v-if="producer.avatarBlue || producer.avatarRed"
-                  class="producer-avatar"
-                  :src="(pi % 2 === 0 ? producer.avatarBlue : producer.avatarRed) || producer.avatarBlue || producer.avatarRed"
-                  alt="出品人头像"
-                />
-                <div class="producer-meta">
-                  <strong>{{ producer.name }}</strong>
-                  <span>{{ producer.title }}</span>
+      <Transition name="session-fade" mode="out-in">
+        <div v-if="currentSession.description || (currentSession.producers && currentSession.producers.length)" :key="activeSession" class="session-info">
+          <div class="session-info-body">
+            <div class="session-info-producers">
+              <h3 class="session-info-title">出品人</h3>
+              <div class="session-info-producers-list">
+                <div v-for="(producer, pi) in currentSession.producers" :key="pi" class="producer-item">
+                  <img
+                    v-if="producer.avatarBlue || producer.avatarRed"
+                    class="producer-avatar"
+                    :src="(pi % 2 === 0 ? producer.avatarBlue : producer.avatarRed) || producer.avatarBlue || producer.avatarRed"
+                    alt="出品人头像"
+                  />
+                  <div class="producer-meta">
+                    <strong>{{ producer.name }}</strong>
+                    <span>{{ producer.title }}</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div v-if="currentSession.description" class="session-info-content">
-            <p class="session-info-desc">{{ currentSession.description }}</p>
+            <div v-if="currentSession.description" class="session-info-content">
+              <p class="session-info-desc">{{ currentSession.description }}</p>
+            </div>
           </div>
         </div>
-      </div>
+      </Transition>
 
       <!-- 纵向 timeline 议程列表 -->
-      <div v-if="currentAgenda.length" class="timeline">
+      <Transition name="session-fade" mode="out-in">
+      <div v-if="currentAgenda.length" :key="activeSession + '-timeline'" class="timeline">
         <div class="timeline-line"></div>
         <div
           v-for="(item, index) in currentAgenda"
@@ -231,6 +234,7 @@ const toggleExpand = (index) => {
           </div>
         </div>
       </div>
+      </Transition>
     </div>
   </section>
 </template>
@@ -239,6 +243,16 @@ const toggleExpand = (index) => {
 .agenda {
   padding: 42px 0;
   background: #fff;
+}
+
+.session-fade-enter-active,
+.session-fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.session-fade-enter-from,
+.session-fade-leave-to {
+  opacity: 0;
 }
 
 .section-header {
