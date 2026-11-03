@@ -1,0 +1,14 @@
+src/components/AgendaSection.vue
+  h_10fc9938fe8725 159,185,378
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1dcbfa78d50b9cad05c52e4223bcc83c22f9f43b",
+  "prompts": {},
+  "humans": {
+    "h_10fc9938fe8725": {
+      "author": "xudafeng <xudafeng@126.com>"
+    }
+  }
+}
