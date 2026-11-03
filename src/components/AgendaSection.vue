@@ -156,8 +156,7 @@ const toggleExpand = (index) => {
       </div>
 
       <!-- 专题描述 + 出品人信息 -->
-      <Transition name="session-fade" mode="out-in">
-        <div v-if="currentSession.description || (currentSession.producers && currentSession.producers.length)" :key="activeSession" class="session-info">
+        <div v-if="currentSession.description || (currentSession.producers && currentSession.producers.length)" class="session-info">
           <div class="session-info-body">
             <div class="session-info-producers">
               <h3 class="session-info-title">出品人</h3>
@@ -181,11 +180,9 @@ const toggleExpand = (index) => {
             </div>
           </div>
         </div>
-      </Transition>
 
       <!-- 纵向 timeline 议程列表 -->
-      <Transition name="session-fade" mode="out-in">
-      <div v-if="currentAgenda.length" :key="activeSession + '-timeline'" class="timeline">
+      <div v-if="currentAgenda.length" class="timeline">
         <div class="timeline-line"></div>
         <div
           v-for="(item, index) in currentAgenda"
@@ -234,7 +231,6 @@ const toggleExpand = (index) => {
           </div>
         </div>
       </div>
-      </Transition>
     </div>
   </section>
 </template>
@@ -243,16 +239,6 @@ const toggleExpand = (index) => {
 .agenda {
   padding: 42px 0;
   background: #fff;
-}
-
-.session-fade-enter-active,
-.session-fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.session-fade-enter-from,
-.session-fade-leave-to {
-  opacity: 0;
 }
 
 .section-header {
@@ -389,7 +375,7 @@ const toggleExpand = (index) => {
 
 .session-info-body {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
 }
 
