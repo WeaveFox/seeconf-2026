@@ -29,7 +29,7 @@ export const sessions = [
     isLive: true,
     color: '#f3584c',
     producers: [{ name: '达峰', title: '蚂蚁集团 · 平台体验技术部负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fckbRapByFQAAAAAUKAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VWIITqdL1_oAAAAAUxAAAAgADiiDAQFr/original' }],
-    description: ''
+    description: '主会场以“创造力复兴”为主题，围绕模型前沿、产品创新、终端体验与开源协作，通过主题分享、关键发布与圆桌对话，探讨如何借助 AI，让更多人跨越专业、成本与协作的门槛，把构想变成有价值的产品、内容与服务。你和我既是创造者，也是体验者，一个人的创造，也可以成为另一个人的新体验——我们不仅可以改善已有的体验，更有机会创造过去没有的体验。大量生成不等于创造繁荣，技术突破也不会自动成为好体验。体验科技的价值主张是：以人为出发点，以科技拓展创造的边界，把创造的增量转化为你我能够感受到的体验价值。'
   },
   {
     id: 'ai-experience',
