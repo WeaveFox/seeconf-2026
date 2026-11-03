@@ -391,8 +391,8 @@ export const agendaData = {
     },
     {
       time: '15:55 - 16:20',
-      title: 'WeavefoxVibe：从企业内部走向开源的 vibe coding 实践',
-      description: 'WeaveFoxVibe 是 WeaveFox 品牌下的 VibeCoding 智能创作平台，面向蚂蚁内部小二，让非技术同学无需感知代码与数据库，"输入灵感—多轮创作—发布上线"即可一小时内完成产品上线，过去需一周以上排期对齐的工具，如今半天即可交付。凭借自研 Agentic "既好又省"的生成效果、99% 的稳定性保障、真实可用的 1-5-10 监控告警，产品已覆盖蚂蚁内部所有 BG、触达 80%+ 同学，并承接 527 技术日等公司级活动。团队以超级单元全栈组织践行"客户第一、精益经营"，基于全栈的 nextack 框架支撑高效迭代。项目即将开源，把平台能力、Agentic 生成链路与 nextack 全栈框架沉淀开放，借助社区的力量共同成长、共建共享。',
+      title: 'WeaveFoxVibe：从企业内部走向开源的 Vibe Coding 实践',
+      description: 'WeaveFoxVibe 是 WeaveFox 品牌下的 Vibe Coding 智能创作平台，面向蚂蚁内部小二，让非技术同学无需感知代码与数据库，"输入灵感—多轮创作—发布上线"即可一小时内完成产品上线，过去需一周以上排期对齐的工具，如今半天即可交付。凭借自研 Agentic "既好又省"的生成效果、99% 的稳定性保障、真实可用的 1-5-10 监控告警，产品已覆盖蚂蚁内部所有 BG、触达 80%+ 同学，并承接 527 技术日等公司级活动。团队以超级单元全栈组织践行"客户第一、精益经营"，基于全栈的 nextack 框架支撑高效迭代。项目即将开源，把平台能力、Agentic 生成链路与 nextack 全栈框架沉淀开放，借助社区的力量共同成长、共建共享。',
       speaker: '王安然（桐童）、郑耀钧（靴猫）',
       speakerTitle: '桐童：蚂蚁集团 · WeaveFoxVibe 架构师 / 靴猫：蚂蚁集团 · AI 全栈工程师',
       avatarBlue: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/0yWyR4GZ1IsAAAAAR5AAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/5LkdQJgOFfoAAAAARMAAAAgADiiDAQFr/original'],
