@@ -94,13 +94,22 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VCSKR6_0VZMAAAAASRAAAAgADiiDAQFr/original',
     },
     {
-      time: '10:00 - 10:20',
+      time: '9:40 - 10:00',
       title: '人人都能做产品了？然后呢？',
       description: 'AI 正在让「人人都是产品经理」从一种理念变成现实，但当产品越来越容易被创造，新的问题也随之出现：做出来的东西，真的有人需要吗？\n\n从实体产品到数字化产品，再到 AI 生成的产品，创新的风险、瓶颈和流程正在发生怎样的变化？当个人提效不再等于组织增长，当客户也能自己创造产品，大公司和小团队又该如何应对？\n\n结合近期对全球 AI 辅助产品创新的前沿探索与企业实践，本次分享将重新思考产品创新的未来，并最终回到每个人：当创造的能力不再稀缺，什么才是我们真正的竞争力？',
       speaker: '苏杰',
       speakerTitle: '产品创新顾问，良仓孵化器创始合伙人，《人人都是产品经理》丛书作者',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/kmU_Rp4e55MAAAAASNAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/7WiwTY5M2oQAAAAAR0AAAAgADiiDAQFr/original',
+    },
+    {
+      time: '10:00 - 10:20',
+      title: '创造力的引擎，从 Token 到 World',
+      description: '从 Foundation Model 角度分享创造力如何涌现',
+      speaker: '张志强（零幺）',
+      speakerTitle: '蚂蚁集团百灵语言基座负责人',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/UPgyRpwAyDMAAAAARXAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/K4ujSrbi2AAAAAAASJAAAAgADiiDAQFr/original',
     },
     {
       time: '10:20 - 10:40',

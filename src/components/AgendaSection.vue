@@ -127,6 +127,35 @@ const toggleExpand = (index) => {
   }
   expandedItems.value = newSet
 }
+
+// 头像 3D 倾斜动效
+const MAX_TILT = 8
+
+const handleAvatarTilt = (event) => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const el = event.currentTarget
+  const rect = el.getBoundingClientRect()
+  const px = (event.clientX - rect.left) / rect.width
+  const py = (event.clientY - rect.top) / rect.height
+  const rotateY = (px - 0.5) * 2 * MAX_TILT
+  const rotateX = -(py - 0.5) * 2 * MAX_TILT
+  el.style.transform = `perspective(500px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale(1.08)`
+  el.style.transition = 'filter 0.3s ease'
+  el.style.zIndex = '10'
+}
+
+const handleAvatarLeave = (event) => {
+  const el = event.currentTarget
+  el.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), filter 0.3s ease'
+  el.style.transform = ''
+  el.style.zIndex = ''
+}
+
+const getAvatarGlowColor = (item, localIndex, avatarIdx = 0) => {
+  const speakerOffset = globalOffset.value + speakerIndexMap.value[localIndex]
+  const isBlue = (speakerOffset + avatarIdx) % 2 === 0
+  return isBlue ? 'rgba(0, 235, 250, 0.5)' : 'rgba(249, 11, 13, 0.5)'
+}
 </script>
 
 <template>
@@ -170,8 +199,11 @@ const toggleExpand = (index) => {
                   <img
                     v-if="producer.avatarBlue || producer.avatarRed"
                     class="producer-avatar"
+                    :style="{ '--glow-color': pi % 2 === 0 ? 'rgba(0, 235, 250, 0.5)' : 'rgba(249, 11, 13, 0.5)' }"
                     :src="(pi % 2 === 0 ? producer.avatarBlue : producer.avatarRed) || producer.avatarBlue || producer.avatarRed"
                     alt="出品人头像"
+                    @mousemove="handleAvatarTilt"
+                    @mouseleave="handleAvatarLeave"
                   />
                   <div class="producer-meta">
                     <strong>{{ producer.name }}</strong>
@@ -227,8 +259,11 @@ const toggleExpand = (index) => {
                   v-for="(avatarUrl, avatarIdx) in getAvatarList(item, index)"
                   :key="avatarIdx"
                   class="guest-avatar"
+                  :style="{ '--glow-color': getAvatarGlowColor(item, index, avatarIdx) }"
                   :src="avatarUrl"
                   alt="嘉宾头像"
+                  @mousemove="handleAvatarTilt"
+                  @mouseleave="handleAvatarLeave"
                 />
               </div>
               <div class="guest-meta">
@@ -461,6 +496,16 @@ const toggleExpand = (index) => {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), filter 0.3s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .producer-avatar:hover {
+    filter: drop-shadow(0 8px 20px var(--glow-color, rgba(0, 0, 0, 0.15)));
+  }
 }
 
 .producer-meta {
@@ -659,6 +704,15 @@ const toggleExpand = (index) => {
   object-fit: contain;
   flex-shrink: 0;
   position: relative;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), filter 0.3s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .guest-avatar:hover {
+    filter: drop-shadow(0 8px 20px var(--glow-color, rgba(0, 0, 0, 0.15)));
+  }
 }
 
 .guest-avatars .guest-avatar:not(:only-child) {
