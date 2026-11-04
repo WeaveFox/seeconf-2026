@@ -28,7 +28,7 @@ export const sessions = [
     subtitle: '创造力复兴',
     isLive: true,
     color: '#f3584c',
-    producers: [{ name: '达峰', title: '蚂蚁集团 · 平台体验技术部负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fckbRapByFQAAAAAUKAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VWIITqdL1_oAAAAAUxAAAAgADiiDAQFr/original' }],
+    producers: [{ name: '徐达峰（达峰）', title: '蚂蚁集团 · 平台体验技术部负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fckbRapByFQAAAAAUKAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VWIITqdL1_oAAAAAUxAAAAgADiiDAQFr/original' }],
     description: '主会场以“创造力复兴”为主题，围绕模型前沿、产品创新、终端体验与开源协作，通过主题分享、关键发布与圆桌对话，探讨如何借助 AI，让更多人跨越专业、成本与协作的门槛，把构想变成有价值的产品、内容与服务。你和我既是创造者，也是体验者，一个人的创造，也可以成为另一个人的新体验——我们不仅可以改善已有的体验，更有机会创造过去没有的体验。大量生成不等于创造繁荣，技术突破也不会自动成为好体验。体验科技的价值主张是：以人为出发点，以科技拓展创造的边界，把创造的增量转化为你我能够感受到的体验价值。'
   },
   {
@@ -40,7 +40,7 @@ export const sessions = [
       { name: '张婧（韵锦）', title: '蚂蚁集团 · AI 创新硬件负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/S3JXSYOWYjwAAAAARpAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/tg4aQ5hGgFEAAAAAR5AAAAgADiiDAQFr/original' },
       { name: '张玉瑜（勾玉）', title: '蚂蚁集团 · 支付宝资深技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/J5qbQK8547QAAAAARtAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Y3DSRJjtMB8AAAAARxAAAAgADiiDAQFr/original' },
     ],
-    description: 'AI 的价值不止于技术突破，更在于打开新的体验可能。本专题聚焦 AI 如何让人突破专业、成本与协作的门槛，把构想变成可感知的作品与服务。从多模态生成式界面、跨端协同到具身交互，探讨智能如何进入日常、成为你能用得上的能力；从 Personal Agent、人机协同到群体智能，看智能如何拓展个人与团队的创造边界。汇聚一线产品与工程团队，分享从原型到真实产品的落地经验，让创造的增量转化为你我真实可感的体验价值。',
+    description: 'AI 的价值不只在技术突破，更在于开启全新体验。本专题聚焦 AI 帮人跨过专业、成本、协作门槛，把想法变成可感知的作品与服务。我们聊多模态界面、跨端协同、具身交互，看智能融入日常；也探讨个人 Agent、人机协同、群体智能，拓宽创造边界。一线产品与工程团队分享原型到产品的落地经验，让 AI 带来的创造力增量，化作我们真切可感的体验价值。',
     infoImage: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/I5iyQYRzl40AAAAAZSAAAAgADiiDAQFr/original',
   },
   {
@@ -52,7 +52,7 @@ export const sessions = [
       { name: '陈成（云谦）', title: '阿里巴巴 · QoderCLI 高级技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/V9ZWRanRv3EAAAAARqAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/TdnPQ5x4K8MAAAAARoAAAAgADiiDAQFr/original' },
       { name: '曹磊（明是）', title: '蚂蚁集团 · 技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/sy1XRrlnAbEAAAAASGAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/F1HdTpfKBTcAAAAAR4AAAAgADiiDAQFr/original' },
     ],
-    description: '当下 AI 基础模型能力持续提升，真正的考验落在实际工程落地环节。从模型调优、推理部署到稳定上线、成本管控，每一环都考验扎实的工程能力。本专题聚焦一线落地的真实挑战，避开纸面理论，深入探讨研发范式重塑、复杂 Agent 系统架构与线上 Badcase 稳定性治理。从工具链革新到客户端工程落地，分享来自蚂蚁、阿里、字节及高校团队的专家经验，解析如何用工程手段让 AI 跑通业务闭环，帮助从业者把 AI 从 Demo 原型推向高质量上线，真正跑起来、用起来、产生价值。',
+    description: '当下 AI 基础模型能力持续提升，考验在于工程落地。模型调优、推理部署、稳定上线、成本管控，每一环都考验硬功夫。本专题聚焦一线难题，抛开纸面理论，探讨研发范式、复杂 Agent 架构与线上 Badcase 理，覆盖工具链和客户端工程实践。汇集蚂蚁、阿里、字节与高校专家经验，拆解 AI 业务闭环，帮从业者把 Demo 推向高质量上线，让 AI 真正跑起来、用起来、创造价值。',
     infoImage: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/RfqVRJOSuwgAAAAAZDAAAAgADiiDAQFr/original',
   },
   {
