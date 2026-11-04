@@ -156,7 +156,12 @@ const toggleExpand = (index) => {
       </div>
 
       <!-- 专题描述 + 出品人信息 -->
-        <div v-if="currentSession.description || (currentSession.producers && currentSession.producers.length)" class="session-info">
+      <Transition name="agenda-switch" mode="out-in">
+        <div
+          v-if="currentSession.description || (currentSession.producers && currentSession.producers.length)"
+          :key="activeSession"
+          class="session-info"
+        >
           <div class="session-info-body">
             <div class="session-info-producers">
               <h3 class="session-info-title">出品人</h3>
@@ -180,57 +185,60 @@ const toggleExpand = (index) => {
             </div>
           </div>
         </div>
+      </Transition>
 
       <!-- 纵向 timeline 议程列表 -->
-      <div v-if="currentAgenda.length" class="timeline">
-        <div class="timeline-line"></div>
-        <div
-          v-for="(item, index) in currentAgenda"
-          :key="index"
-          class="timeline-item"
-          :class="{ 'has-desc': isLongDesc(item) }"
-        >
-          <span class="timeline-badge" :class="getBadgeClass(index)"></span>
-          <div v-if="item.time" class="timeline-time-col">
-            <p class="timeline-time">{{ item.time }}</p>
-          </div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">{{ item.title }}</h3>
-            <p
-              v-if="item.description"
-              class="timeline-desc"
-              :class="{ expanded: isExpanded(index), 'no-clamp': !isLongDesc(item) }"
-            >{{ item.description }}</p>
-            <button
-              v-if="isLongDesc(item)"
-              class="desc-toggle"
-              @click="toggleExpand(index)"
-            >
-              {{ isExpanded(index) ? '收起' : '详情' }}
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                :style="{ transform: isExpanded(index) ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            </button>
-          </div>
-          <div v-if="hasSpeaker(item)" class="timeline-guest">
-            <div v-if="hasAvatar(item)" class="guest-avatars">
-              <img
-                v-for="(avatarUrl, avatarIdx) in getAvatarList(item, index)"
-                :key="avatarIdx"
-                class="guest-avatar"
-                :src="avatarUrl"
-                alt="嘉宾头像"
-              />
+      <Transition name="agenda-switch" mode="out-in">
+        <div v-if="currentAgenda.length" :key="activeSession" class="timeline">
+          <div class="timeline-line"></div>
+          <div
+            v-for="(item, index) in currentAgenda"
+            :key="index"
+            class="timeline-item"
+            :class="{ 'has-desc': isLongDesc(item) }"
+          >
+            <span class="timeline-badge" :class="getBadgeClass(index)"></span>
+            <div v-if="item.time" class="timeline-time-col">
+              <p class="timeline-time">{{ item.time }}</p>
             </div>
-            <div class="guest-meta">
-              <strong>{{ item.speaker }}</strong>
-              <span v-if="item.speakerTitle">{{ item.speakerTitle }}</span>
+            <div class="timeline-content">
+              <h3 class="timeline-title">{{ item.title }}</h3>
+              <p
+                v-if="item.description"
+                class="timeline-desc"
+                :class="{ expanded: isExpanded(index), 'no-clamp': !isLongDesc(item) }"
+              >{{ item.description }}</p>
+              <button
+                v-if="isLongDesc(item)"
+                class="desc-toggle"
+                @click="toggleExpand(index)"
+              >
+                {{ isExpanded(index) ? '收起' : '详情' }}
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  :style="{ transform: isExpanded(index) ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+            </div>
+            <div v-if="hasSpeaker(item)" class="timeline-guest">
+              <div v-if="hasAvatar(item)" class="guest-avatars">
+                <img
+                  v-for="(avatarUrl, avatarIdx) in getAvatarList(item, index)"
+                  :key="avatarIdx"
+                  class="guest-avatar"
+                  :src="avatarUrl"
+                  alt="嘉宾头像"
+                />
+              </div>
+              <div class="guest-meta">
+                <strong>{{ item.speaker }}</strong>
+                <span v-if="item.speakerTitle">{{ item.speakerTitle }}</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Transition>
     </div>
   </section>
 </template>
@@ -239,6 +247,16 @@ const toggleExpand = (index) => {
 .agenda {
   padding: 42px 0;
   background: #fff;
+}
+
+/* 切换专题时内容区域淡入淡出，避免图片重载导致的闪烁 */
+.agenda-switch-enter-active,
+.agenda-switch-leave-active {
+  transition: opacity 0.2s ease;
+}
+.agenda-switch-enter-from,
+.agenda-switch-leave-to {
+  opacity: 0;
 }
 
 .section-header {
@@ -278,7 +296,7 @@ const toggleExpand = (index) => {
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
   overflow: hidden;
 }
