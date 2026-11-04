@@ -120,6 +120,33 @@ export const agendaData = {
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/jfkCRqX7woIAAAAARlAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/aL-ZS4FAp1sAAAAAR7AAAAgADiiDAQFr/original',
     },
+    {
+      time: '10:40 - 11:00',
+      title: '主题演讲',
+      description: '',
+      speaker: '',
+      speakerTitle: '',
+      avatarBlue: '',
+      avatarRed: '',
+    },
+    {
+      time: '',
+      title: '大会发布',
+      description: '',
+      speaker: '',
+      speakerTitle: '',
+      avatarBlue: '',
+      avatarRed: '',
+    },
+    {
+      time: '',
+      title: '圆桌论坛',
+      description: '',
+      speaker: '',
+      speakerTitle: '',
+      avatarBlue: '',
+      avatarRed: '',
+    },
   ],
   'ai-experience': [
     {
