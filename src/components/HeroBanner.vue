@@ -38,7 +38,7 @@ const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice
       <p class="hero-date"><span class="date-loc">杭州 · 蚂蚁 A 空间</span><span class="date-sep"> / </span>{{ conferenceInfo.date }}</p>
     </div>
 
-    <button class="hero-scroll-hint" data-hero-scroll type="button" @click="scrollTo('guide')" @contextmenu="onControlContextMenu">
+    <button class="hero-scroll-hint" data-hero-scroll type="button" @click="scrollTo('agenda')" @contextmenu="onControlContextMenu">
       <span>向下滚动探索</span>
       <span class="scroll-arrow" aria-hidden="true"></span>
     </button>
