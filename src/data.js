@@ -105,9 +105,9 @@ export const agendaData = {
     {
       time: '10:00 - 10:20',
       title: '创造力的引擎，从 Token 到 World',
-      description: '从 Foundation Model 角度分享创造力如何涌现',
+      description: '从 Foundation Model 角度分享创造力如何涌现。',
       speaker: '张志强（零幺）',
-      speakerTitle: '蚂蚁集团百灵语言基座负责人',
+      speakerTitle: '蚂蚁集团 · 百灵语言基座负责人',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/UPgyRpwAyDMAAAAARXAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/K4ujSrbi2AAAAAAASJAAAAgADiiDAQFr/original',
     },

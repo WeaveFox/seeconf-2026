@@ -128,33 +128,10 @@ const toggleExpand = (index) => {
   expandedItems.value = newSet
 }
 
-// 头像 3D 倾斜动效
-const MAX_TILT = 8
-
-const handleAvatarTilt = (event) => {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
-  const el = event.currentTarget
-  const rect = el.getBoundingClientRect()
-  const px = (event.clientX - rect.left) / rect.width
-  const py = (event.clientY - rect.top) / rect.height
-  const rotateY = (px - 0.5) * 2 * MAX_TILT
-  const rotateX = -(py - 0.5) * 2 * MAX_TILT
-  el.style.transform = `perspective(500px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale(1.08)`
-  el.style.transition = 'filter 0.3s ease'
-  el.style.zIndex = '10'
-}
-
-const handleAvatarLeave = (event) => {
-  const el = event.currentTarget
-  el.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), filter 0.3s ease'
-  el.style.transform = ''
-  el.style.zIndex = ''
-}
-
-const getAvatarGlowColor = (item, localIndex, avatarIdx = 0) => {
+const getGlowColor = (localIndex, avatarIdx = 0) => {
   const speakerOffset = globalOffset.value + speakerIndexMap.value[localIndex]
   const isBlue = (speakerOffset + avatarIdx) % 2 === 0
-  return isBlue ? 'rgba(0, 235, 250, 0.5)' : 'rgba(249, 11, 13, 0.5)'
+  return isBlue ? 'rgba(15, 131, 211, 0.28)' : 'rgba(243, 88, 76, 0.28)'
 }
 </script>
 
@@ -199,11 +176,9 @@ const getAvatarGlowColor = (item, localIndex, avatarIdx = 0) => {
                   <img
                     v-if="producer.avatarBlue || producer.avatarRed"
                     class="producer-avatar"
-                    :style="{ '--glow-color': pi % 2 === 0 ? 'rgba(0, 235, 250, 0.5)' : 'rgba(249, 11, 13, 0.5)' }"
+                    :style="{ '--glow-color': pi % 2 === 0 ? 'rgba(15, 131, 211, 0.28)' : 'rgba(243, 88, 76, 0.28)' }"
                     :src="(pi % 2 === 0 ? producer.avatarBlue : producer.avatarRed) || producer.avatarBlue || producer.avatarRed"
                     alt="出品人头像"
-                    @mousemove="handleAvatarTilt"
-                    @mouseleave="handleAvatarLeave"
                   />
                   <div class="producer-meta">
                     <strong>{{ producer.name }}</strong>
@@ -259,11 +234,9 @@ const getAvatarGlowColor = (item, localIndex, avatarIdx = 0) => {
                   v-for="(avatarUrl, avatarIdx) in getAvatarList(item, index)"
                   :key="avatarIdx"
                   class="guest-avatar"
-                  :style="{ '--glow-color': getAvatarGlowColor(item, index, avatarIdx) }"
+                  :style="{ '--glow-color': getGlowColor(index, avatarIdx) }"
                   :src="avatarUrl"
                   alt="嘉宾头像"
-                  @mousemove="handleAvatarTilt"
-                  @mouseleave="handleAvatarLeave"
                 />
               </div>
               <div class="guest-meta">
@@ -497,14 +470,14 @@ const getAvatarGlowColor = (item, localIndex, avatarIdx = 0) => {
   object-fit: cover;
   flex-shrink: 0;
   position: relative;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), filter 0.3s ease;
-  will-change: transform;
-  cursor: pointer;
+  filter: drop-shadow(0 4px 0 transparent) saturate(1) contrast(1);
+  transition: filter 0.35s ease, transform 0.35s ease;
 }
 
 @media (hover: hover) {
   .producer-avatar:hover {
-    filter: drop-shadow(0 8px 20px var(--glow-color, rgba(0, 0, 0, 0.15)));
+    filter: drop-shadow(0 10px 18px var(--glow-color, rgba(0, 0, 0, 0.15))) saturate(1.2) contrast(1.05);
+    transform: rotate(-1.5deg);
   }
 }
 
@@ -704,14 +677,14 @@ const getAvatarGlowColor = (item, localIndex, avatarIdx = 0) => {
   object-fit: contain;
   flex-shrink: 0;
   position: relative;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), filter 0.3s ease;
-  will-change: transform;
-  cursor: pointer;
+  filter: drop-shadow(0 4px 0 transparent) saturate(1) contrast(1);
+  transition: filter 0.35s ease, transform 0.35s ease;
 }
 
 @media (hover: hover) {
   .guest-avatar:hover {
-    filter: drop-shadow(0 8px 20px var(--glow-color, rgba(0, 0, 0, 0.15)));
+    filter: drop-shadow(0 10px 18px var(--glow-color, rgba(0, 0, 0, 0.15))) saturate(1.2) contrast(1.05);
+    transform: rotate(-1.5deg);
   }
 }
 
