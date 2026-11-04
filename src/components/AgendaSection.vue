@@ -375,7 +375,7 @@ const toggleExpand = (index) => {
 
 .session-info-body {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 24px;
 }
 
@@ -384,6 +384,8 @@ const toggleExpand = (index) => {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-height: 200px;
+  justify-content: center;
 }
 
 .session-info-producers-list {
