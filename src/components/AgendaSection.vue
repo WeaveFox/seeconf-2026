@@ -23,12 +23,14 @@ const hasAvatar = (item) => {
 
 const hasSpeaker = (item) => item.speaker || hasAvatar(item)
 
+const isBreak = (item) => /茶歇/.test(item.title || '')
+
 const globalOffset = computed(() => {
   let count = 0
   for (const session of sessions) {
     if (session.id === activeSession.value) break
     for (const item of (agendaData[session.id] || [])) {
-      if (hasSpeaker(item)) count++
+      if (!isBreak(item)) count++
     }
   }
   return count
@@ -42,13 +44,13 @@ const currentSession = computed(() => {
   return sessions.find(s => s.id === activeSession.value) || {}
 })
 
-// 没有头像的条目不参与红蓝交替计数
+// 茶歇条目不参与红蓝交替计数，其余条目均参与（含无演讲者节点）
 const speakerIndexMap = computed(() => {
   const map = []
   let count = 0
   for (const item of currentAgenda.value) {
     map.push(count)
-    if (hasSpeaker(item)) count++
+    if (!isBreak(item)) count++
   }
   return map
 })
@@ -78,7 +80,7 @@ const getAvatarList = (item, localIndex) => {
 
 const getBadgeClass = (localIndex) => {
   const item = currentAgenda.value[localIndex]
-  if (!hasSpeaker(item)) return 'badge-break'
+  if (isBreak(item)) return 'badge-break'
   return (globalOffset.value + speakerIndexMap.value[localIndex]) % 2 === 0 ? 'badge-blue' : 'badge-red'
 }
 
