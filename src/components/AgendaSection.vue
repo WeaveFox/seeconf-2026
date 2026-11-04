@@ -127,6 +127,12 @@ const toggleExpand = (index) => {
   }
   expandedItems.value = newSet
 }
+
+const getGlowColor = (localIndex, avatarIdx = 0) => {
+  const speakerOffset = globalOffset.value + speakerIndexMap.value[localIndex]
+  const isBlue = (speakerOffset + avatarIdx) % 2 === 0
+  return isBlue ? 'rgba(15, 131, 211, 0.28)' : 'rgba(243, 88, 76, 0.28)'
+}
 </script>
 
 <template>
@@ -170,6 +176,7 @@ const toggleExpand = (index) => {
                   <img
                     v-if="producer.avatarBlue || producer.avatarRed"
                     class="producer-avatar"
+                    :style="{ '--glow-color': pi % 2 === 0 ? 'rgba(15, 131, 211, 0.28)' : 'rgba(243, 88, 76, 0.28)' }"
                     :src="(pi % 2 === 0 ? producer.avatarBlue : producer.avatarRed) || producer.avatarBlue || producer.avatarRed"
                     alt="出品人头像"
                   />
@@ -227,6 +234,7 @@ const toggleExpand = (index) => {
                   v-for="(avatarUrl, avatarIdx) in getAvatarList(item, index)"
                   :key="avatarIdx"
                   class="guest-avatar"
+                  :style="{ '--glow-color': getGlowColor(index, avatarIdx) }"
                   :src="avatarUrl"
                   alt="嘉宾头像"
                 />
@@ -461,6 +469,16 @@ const toggleExpand = (index) => {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  position: relative;
+  filter: drop-shadow(0 4px 0 transparent) saturate(1) contrast(1);
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+@media (hover: hover) {
+  .producer-avatar:hover {
+    filter: drop-shadow(0 10px 18px var(--glow-color, rgba(0, 0, 0, 0.15))) saturate(1.2) contrast(1.05);
+    transform: rotate(-1.5deg);
+  }
 }
 
 .producer-meta {
@@ -659,6 +677,15 @@ const toggleExpand = (index) => {
   object-fit: contain;
   flex-shrink: 0;
   position: relative;
+  filter: drop-shadow(0 4px 0 transparent) saturate(1) contrast(1);
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+@media (hover: hover) {
+  .guest-avatar:hover {
+    filter: drop-shadow(0 10px 18px var(--glow-color, rgba(0, 0, 0, 0.15))) saturate(1.2) contrast(1.05);
+    transform: rotate(-1.5deg);
+  }
 }
 
 .guest-avatars .guest-avatar:not(:only-child) {
