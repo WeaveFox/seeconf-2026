@@ -96,7 +96,7 @@ export const agendaData = {
     {
       time: '9:45 - 10:10',
       title: 'AI 时代的端体验与创新',
-      description: '',
+      description: '过去一年，基座模型能力的高速提升为终端智能化打开了全新的想象空间。本分享将介绍支付宝 App 在这一背景下，如何持续构建 AI 时代的新交互体验与终端能力创新——涵盖以自然语言交互与生成式 UI 为代表的新人机交互形态、跨多端与端云协同的 Agent 架构演进、云沙箱等 AI 基建建设，以及生成式渲染的持续演进。',
       speaker: '李彦男（竹光）',
       speakerTitle: '蚂蚁集团 · 支付宝终端引擎负责人',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/jfkCRqX7woIAAAAARlAAAAgADiiDAQFr/original',
