@@ -126,8 +126,8 @@ export const agendaData = {
       description: '',
       speaker: '李俊奎（向秀）、郭磊（尘沫）',
       speakerTitle: '向秀：蚂蚁集团 · 平台工程与技术风险部负责人 / 尘沫：蚂蚁集团 · Galacean 引擎架构师',
-      avatarBlue: ['', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/YKKrS6m6mSkAAAAAQYAAAAgADiiDAQFr/original'],
-      avatarRed: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/6Ml3SaCj-0IAAAAAQbAAAAgADiiDAQFr/original', ''],
+      avatarBlue: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/kCI0Tq2EOREAAAAARUAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/YKKrS6m6mSkAAAAAQYAAAAgADiiDAQFr/original'],
+      avatarRed: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/jYqFR7DegdoAAAAAR_AAAAgADiiDAQFr/original', ''],
     },
     {
       time: '11:15 - 11:30',
@@ -474,6 +474,20 @@ export const specialGuests = [
     title: '蚂蚁集团 · CTO',
     avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/ETOVSLjIvU8AAAAAT7AAAAgADiiDAQFr/original',
     avatarRed: ''
+  },
+  {
+    name: '骆骥',
+    nickname: '谦持',
+    title: '蚂蚁集团 · 平台技术事业群总裁',
+    avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/nARtQ6mEjPkAAAAARaAAAAgADiiDAQFr/original',
+    avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VCSKR6_0VZMAAAAASRAAAAgADiiDAQFr/original',
+  },
+  {
+    name: '曹恺',
+    nickname: '钟繇',
+    title: '蚂蚁集团 · 平台技术事业群副总裁',
+    avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/0FHJSJXyaMAAAAAARWAAAAgADiiDAQFr/original',
+    avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/6PWdSL3Qe9wAAAAARlAAAAgADiiDAQFr/original'
   },
   {
     name: '郑叶飞',
