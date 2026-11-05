@@ -127,7 +127,7 @@ export const agendaData = {
       speaker: '李俊奎（向秀）、郭磊（尘沫）',
       speakerTitle: '向秀：蚂蚁集团 · 平台工程与技术风险部负责人 / 尘沫：蚂蚁集团 · Galacean 引擎架构师',
       avatarBlue: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/kCI0Tq2EOREAAAAARUAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/YKKrS6m6mSkAAAAAQYAAAAgADiiDAQFr/original'],
-      avatarRed: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/jYqFR7DegdoAAAAAR_AAAAgADiiDAQFr/original', ''],
+      avatarRed: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/jYqFR7DegdoAAAAAR_AAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Bb5kToJNMr8AAAAARlAAAAgADiiDAQFr/original'],
     },
     {
       time: '11:15 - 11:30',
