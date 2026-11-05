@@ -617,7 +617,7 @@ export const partners = [
   { name: '极星会', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/HMQGS4WP8WIAAAAAQMAAAAgADiiDAQFr/fmt.avif', link: 'https://www.gitfund.cn', hideName: true },
   { name: 'AiWork', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/HZGBSKacAOIAAAAAQzAAAAgADiiDAQFr/original', link: 'https://aiwork.dtagi.cn/', hideName: true },
   { name: 'DBAplus', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/MUk0QKztWnMAAAAAQGAAAAgADiiDAQFr/original', link: 'https://dbaplus.cn', hideName: true },
-  { name: '理想汇宝厅', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/iK4dSqnXLXgAAAAARCAAAAgADiiDAQFr/original', link: '', hideName: true },
+  { name: '理想汇宝厅', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/iK4dSqnXLXgAAAAARCAAAAgADiiDAQFr/original', link: 'https://www.xiaohongshu.com/user/profile/66b0c50e000000001d03308f?xsec_token=YBB6wslBByarX1M1q2D0zKrYnsP5MXeutYEyb0ljfyzdY=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=N0g1OUQ5PE46TEZFSkoxOTc0Tj49SDY5&apptime=1793866605&share_id=042b03b0b5b14a9f8bc501b817c8ecae&track_code=2t77uouGVaP', hideName: true },
 ]
 
 // 往届回顾
