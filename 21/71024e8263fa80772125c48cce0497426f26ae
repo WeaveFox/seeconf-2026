@@ -1,0 +1,19 @@
+src/data.js
+  s_63a0223fb85d47::t_a5eaae6d3b0d57 500-511,520-533
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2171024e8263fa80772125c48cce0497426f26ae",
+  "prompts": {},
+  "sessions": {
+    "s_63a0223fb85d47": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "fe6dba2f-4493-4f2e-b119-decabf42b4e3",
+        "model": "codefuse_official_channel/Kimi-K3.1-Pro:glink_domestic"
+      },
+      "human_author": "hustcc <i@hust.cc>"
+    }
+  }
+}
