@@ -37,7 +37,7 @@ export const sessions = [
     subtitle: 'AI 创新体验',
     color: '#0f83d3',
     producers: [
-      { name: '张婧（韵锦）', title: '蚂蚁集团 · AI 创新硬件负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/S3JXSYOWYjwAAAAARpAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/tg4aQ5hGgFEAAAAAR5AAAAgADiiDAQFr/original' },
+      { name: '张婧', title: '蚂蚁集团 · AI 创新硬件负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/S3JXSYOWYjwAAAAARpAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/tg4aQ5hGgFEAAAAAR5AAAAgADiiDAQFr/original' },
       { name: '张玉瑜（勾玉）', title: '蚂蚁集团 · 支付宝资深技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/J5qbQK8547QAAAAARtAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Y3DSRJjtMB8AAAAARxAAAAgADiiDAQFr/original' },
     ],
     description: 'AI 的价值不只在技术突破，更在于开启全新体验。本专题聚焦 AI 帮人跨过专业、成本、协作门槛，把想法变成可感知的作品与服务。我们聊多模态界面、跨端协同、具身交互，看智能融入日常；也探讨个人 Agent、人机协同、群体智能，拓宽创造边界。一线产品与工程团队分享原型到产品的落地经验，让 AI 带来的创造力增量，化作我们真切可感的体验价值。',
@@ -629,3 +629,54 @@ export const pastConferences = [
   { year: '2019', url: 'https://seeconf2019.antfin.com/' },
   { year: '2018', url: 'https://seeconf2018.alipay.com/' },
 ]
+
+// 购票链接
+export const ticketBuyUrl = 'https://www.bagevent.com/event/SEEConf2026'
+
+// 票档信息
+export const ticketTiers = [
+  { id: 'super-early-bird', name: '超级早鸟票', badge: '1024限定', startDate: '2026-10-22T00:00:00', endDate: '2026-10-24T23:59:59', price: 79, quantity: 200 },
+  { id: 'early-bird', name: '早鸟票', badge: '限时', startDate: '2026-10-25T00:00:00', endDate: '2026-11-07T23:59:59', price: 99, quantity: 200, originalPrice: 199 },
+  { id: 'regular', name: '普通票', badge: '', startDate: '2026-11-08T00:00:00', endDate: '2026-11-27T23:59:59', price: 199, quantity: 200, groupNote: '团购票买5赠1 ≈ ¥166/张' },
+  { id: 'group', name: '团购票', badge: '买5赠1', startDate: '2026-11-08T00:00:00', endDate: '2026-11-27T23:59:59', price: 199, quantity: 100, effectivePrice: 166 },
+]
+
+// 获取当前生效的优先票档（按数组顺序返回第一个在有效期内的，排除团购票）
+export function getActiveTicketTier() {
+  const now = Date.now()
+  for (const tier of ticketTiers) {
+    if (tier.id === 'group') continue
+    const start = new Date(tier.startDate).getTime()
+    const end = new Date(tier.endDate).getTime()
+    if (now >= start && now <= end) return tier
+  }
+  return null
+}
+
+// 计算倒计时（返回天/时/分/秒和总毫秒）
+export function getCountdown(endDate) {
+  const total = new Date(endDate).getTime() - Date.now()
+  if (total <= 0) return { total: 0, days: 0, hours: 0, minutes: 0, seconds: 0 }
+  return {
+    total,
+    days: Math.floor(total / 86400000),
+    hours: Math.floor((total % 86400000) / 3600000),
+    minutes: Math.floor((total % 3600000) / 60000),
+    seconds: Math.floor((total % 60000) / 1000),
+  }
+}
+
+// 紧迫度等级（none / medium / high / critical）
+export function getUrgencyLevel(endDate) {
+  const total = new Date(endDate).getTime() - Date.now()
+  if (total <= 0) return 'none'
+  if (total <= 24 * 3600000) return 'critical'   // < 24h
+  if (total <= 3 * 86400000) return 'high'       // < 3 days
+  if (total <= 7 * 86400000) return 'medium'     // < 7 days
+  return 'none'
+}
+
+// 整数补零（用于倒计时显示）
+export function pad2(n) {
+  return String(n).padStart(2, '0')
+}
