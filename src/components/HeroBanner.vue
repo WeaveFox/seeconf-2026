@@ -59,7 +59,7 @@ onUnmounted(() => {
         <p class="hero-description">{{ conferenceInfo.slogan }}</p>
       </div>
       <div class="hero-cta">
-        <a class="hero-buy-btn" :class="`urgency-${urgencyLevel}`" :href="ticketBuyUrl" target="_blank" rel="noopener" @contextmenu="onControlContextMenu"><span class="btn-label">立即购票<span class="btn-arrow">↗</span></span><span class="btn-sub" v-if="showCountdown"><span class="countdown-dot"></span>早鸟票 <b class="btn-price">¥{{ activeTier.price }}</b> · 仅剩<span v-if="countdown.days > 0"> {{ countdown.days }}天</span> {{ pad2(countdown.hours) }}:{{ pad2(countdown.minutes) }}:{{ pad2(countdown.seconds) }}</span></a>
+        <a class="hero-buy-btn" :class="`urgency-${urgencyLevel}`" :href="ticketBuyUrl" target="_blank" rel="noopener" @contextmenu="onControlContextMenu"><span class="btn-label">立即购票<span class="btn-arrow">↗</span></span><span class="btn-sub" v-if="showCountdown"><span class="countdown-dot"></span>早鸟票&nbsp;<b class="btn-price">¥{{ activeTier.price }}</b>&nbsp;<s class="btn-price-strike" v-if="activeTier.originalPrice">¥{{ activeTier.originalPrice }}</s>&nbsp;·&nbsp;仅剩&nbsp;<span v-if="countdown.days > 0">{{ countdown.days }}&nbsp;天&nbsp;</span>{{ pad2(countdown.hours) }}:{{ pad2(countdown.minutes) }}:{{ pad2(countdown.seconds) }}</span></a>
         <p class="hero-date"><span class="date-loc">杭州 · 蚂蚁 A 空间</span><span class="date-sep"> / </span>{{ conferenceInfo.date }}</p>
       </div>
     </div>
@@ -180,6 +180,13 @@ onUnmounted(() => {
 .btn-price {
   opacity: 1;
   font-weight: 700;
+}
+
+.btn-price-strike {
+  opacity: 0.4;
+  font-weight: 400;
+  font-size: 0.85em;
+  text-decoration: line-through;
 }
 
 .hero-buy-btn,
