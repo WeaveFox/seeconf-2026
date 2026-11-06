@@ -148,7 +148,7 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 3px;
-  padding: 12px 50px 10px;
+  padding: 12px 34px 10px;
   vertical-align: middle;
   font-size: clamp(15px, 1.3vw, 20px);
   font-weight: 400;
@@ -185,7 +185,6 @@ onUnmounted(() => {
 .btn-price-strike {
   opacity: 0.4;
   font-weight: 400;
-  font-size: 0.85em;
   text-decoration: line-through;
 }
 
@@ -336,7 +335,7 @@ onUnmounted(() => {
   }
   .hero-buy-btn {
     font-size: clamp(14px, 2vw, 22px);
-    padding: 10px 36px 8px;
+    padding: 10px 20px 8px;
   }
   .hero-date {
     font-size: clamp(10px, 1vw, 12px);
@@ -353,7 +352,7 @@ onUnmounted(() => {
   }
   .hero-description { font-size: min(3.2vw, 1.8svh); }
   .hero-cta { margin-top: 3svh; }
-  .hero-buy-btn { padding: 8px 36px 6px; }
+  .hero-buy-btn { padding: 8px 20px 6px; }
   .hero-date { margin-top: 8px; }
 }
 
