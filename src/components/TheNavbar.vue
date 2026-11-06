@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { navItems, conferenceInfo, pastConferences } from '../data.js'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { navItems, conferenceInfo, pastConferences, ticketBuyUrl, getActiveTicketTier, getUrgencyLevel } from '../data.js'
 
 const scrolled = ref(false)
 const pastFirstScreen = ref(false)
@@ -8,6 +8,15 @@ const mobileMenuOpen = ref(false)
 const pastDropdownOpen = ref(false)
 let scrollTimer = null
 let isAutoScrolling = false
+
+// 票务紧迫度
+const activeTier = computed(() => getActiveTicketTier())
+const isUrgent = computed(() => {
+  const tier = activeTier.value
+  if (!tier) return false
+  const level = getUrgencyLevel(tier.endDate)
+  return level === 'high' || level === 'critical'
+})
 
 const handleScroll = () => {
   scrolled.value = window.scrollY > 60
@@ -127,13 +136,13 @@ onUnmounted(() => {
         </div>
       </nav>
 
-      <a
+      <!-- <a
         class="nav-buy-btn"
-        :class="{ show: pastFirstScreen }"
-        href="https://www.bagevent.com/event/SEEConf2026"
+        :class="{ show: pastFirstScreen, urgent: isUrgent }"
+        :href="ticketBuyUrl"
         target="_blank"
         rel="noopener"
-      >立即购票<span class="nav-btn-arrow">↗</span></a>
+      >立即购票<span class="nav-btn-arrow">↗</span></a> -->
 
       <button class="mobile-toggle" @click="mobileMenuOpen = !mobileMenuOpen">
         <span></span>
@@ -141,13 +150,13 @@ onUnmounted(() => {
         <span></span>
       </button>
 
-      <a
+      <!-- <a
         class="nav-buy-btn-mobile"
-        :class="{ show: pastFirstScreen }"
-        href="https://www.bagevent.com/event/SEEConf2026"
+        :class="{ show: pastFirstScreen, urgent: isUrgent }"
+        :href="ticketBuyUrl"
         target="_blank"
         rel="noopener"
-      >立即购票<span class="nav-btn-arrow">↗</span></a>
+      >立即购票<span class="nav-btn-arrow">↗</span></a> -->
     </div>
   </header>
 </template>
@@ -360,6 +369,15 @@ onUnmounted(() => {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
+.nav-buy-btn.urgent {
+  background: #f3584c;
+}
+
+.nav-buy-btn.urgent:hover {
+  background: #e84a3e;
+  box-shadow: 0 4px 16px rgba(243, 88, 76, 0.35);
+}
+
 .nav-btn-arrow {
   margin-left: 2px;
   font-size: 12px;
@@ -543,6 +561,16 @@ onUnmounted(() => {
   .nav-buy-btn-mobile:hover {
     color: #000;
     border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-buy-btn-mobile.urgent {
+    color: #f3584c;
+    border-color: rgba(243, 88, 76, 0.28);
+  }
+
+  .nav-buy-btn-mobile.urgent:hover {
+    color: #e84a3e;
+    border-color: rgba(243, 88, 76, 0.4);
   }
 }
 </style>

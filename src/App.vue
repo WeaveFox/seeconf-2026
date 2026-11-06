@@ -2,6 +2,7 @@
 import { useHead } from '@unhead/vue'
 import TheNavbar from './components/TheNavbar.vue'
 import HeroBanner from './components/HeroBanner.vue'
+import StickyTicketBar from './components/StickyTicketBar.vue'
 import AgendaSection from './components/AgendaSection.vue'
 import SpeakersSection from './components/SpeakersSection.vue'
 import SpecialGuestsSection from './components/SpecialGuestsSection.vue'
@@ -33,6 +34,7 @@ useHead({
       <div class="section-divider"></div>
     </main>
     <TheFooter />
+    <StickyTicketBar />
   </div>
 </template>
 

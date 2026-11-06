@@ -1,10 +1,26 @@
 <script setup>
-import { ref } from 'vue'
-import { conferenceInfo } from '../data.js'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { conferenceInfo, ticketBuyUrl, getActiveTicketTier, getCountdown, getUrgencyLevel, pad2 } from '../data.js'
 import ShaderCanvas from './ShaderCanvas.vue'
 import HeroCursor from './HeroCursor.vue'
 
 const watercolorReady = ref(false)
+
+// 票务倒计时
+const activeTier = ref(getActiveTicketTier())
+const countdown = ref({ days: 0, hours: 0, minutes: 0, seconds: 0, total: 0 })
+let countdownTimer = null
+
+const urgencyLevel = computed(() => activeTier.value ? getUrgencyLevel(activeTier.value.endDate) : 'none')
+const showCountdown = computed(() => !!activeTier.value && urgencyLevel.value !== 'none')
+const isUrgent = computed(() => urgencyLevel.value === 'high' || urgencyLevel.value === 'critical')
+
+const updateCountdown = () => {
+  activeTier.value = getActiveTicketTier()
+  countdown.value = activeTier.value
+    ? getCountdown(activeTier.value.endDate)
+    : { total: 0, days: 0, hours: 0, minutes: 0, seconds: 0 }
+}
 
 const scrollTo = (anchor) => {
   const el = document.getElementById(anchor)
@@ -18,6 +34,14 @@ const onControlContextMenu = (event) => {
 }
 
 const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice(6)]
+
+onMounted(() => {
+  updateCountdown()
+  countdownTimer = setInterval(updateCountdown, 1000)
+})
+onUnmounted(() => {
+  clearInterval(countdownTimer)
+})
 </script>
 
 <template>
@@ -34,8 +58,10 @@ const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice
         </p>
         <p class="hero-description">{{ conferenceInfo.slogan }}</p>
       </div>
-      <a class="hero-buy-btn" href="https://www.bagevent.com/event/SEEConf2026" target="_blank" rel="noopener" @contextmenu="onControlContextMenu">立即购票<span class="btn-arrow">↗</span></a>
-      <p class="hero-date"><span class="date-loc">杭州 · 蚂蚁 A 空间</span><span class="date-sep"> / </span>{{ conferenceInfo.date }}</p>
+      <div class="hero-cta">
+        <a class="hero-buy-btn" :class="`urgency-${urgencyLevel}`" :href="ticketBuyUrl" target="_blank" rel="noopener" @contextmenu="onControlContextMenu"><span class="btn-label">立即购票<span class="btn-arrow">↗</span></span><span class="btn-sub" v-if="showCountdown"><span class="countdown-dot"></span>早鸟票 <b class="btn-price">¥{{ activeTier.price }}</b> · 仅剩<span v-if="countdown.days > 0"> {{ countdown.days }}天</span> {{ pad2(countdown.hours) }}:{{ pad2(countdown.minutes) }}:{{ pad2(countdown.seconds) }}</span></a>
+        <p class="hero-date"><span class="date-loc">杭州 · 蚂蚁 A 空间</span><span class="date-sep"> / </span>{{ conferenceInfo.date }}</p>
+      </div>
     </div>
 
     <button class="hero-scroll-hint" data-hero-scroll type="button" @click="scrollTo('agenda')" @contextmenu="onControlContextMenu">
@@ -109,20 +135,51 @@ const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice
   color: #000;
 }
 
-.hero-buy-btn {
-  display: inline-block;
+.hero-cta {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 38px;
-  padding: 11px 50px;
+  pointer-events: none;
+}
+
+.hero-buy-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 12px 50px 10px;
   vertical-align: middle;
   font-size: clamp(15px, 1.3vw, 20px);
   font-weight: 400;
-  line-height: 1.4;
   color: #fff;
   border: 1px solid #121212;
   border-radius: 48px;
   background: #121212;
   transition: all 0.3s;
   pointer-events: auto;
+}
+
+.btn-label {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.btn-sub {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.65em;
+  font-weight: 400;
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.btn-price {
+  opacity: 1;
+  font-weight: 700;
 }
 
 .hero-buy-btn,
@@ -140,6 +197,27 @@ const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice
   }
 }
 
+/* ——— 倒计时红点（按钮内） ——— */
+.countdown-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #f3584c;
+  margin-right: 5px;
+  flex-shrink: 0;
+  animation: dot-pulse-hero 1.5s ease-in-out infinite;
+}
+
+.urgency-critical .countdown-dot {
+  animation-duration: 0.8s;
+}
+
+@keyframes dot-pulse-hero {
+  0%, 100% { opacity: 0.35; transform: scale(0.8); }
+  50%      { opacity: 1; transform: scale(1.15); }
+}
+
 .btn-arrow {
   font-size: 1.4em;
   line-height: 0;
@@ -154,8 +232,7 @@ const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice
   letter-spacing: 0.05vw;
   color: rgba(18, 18, 18, 0.5);
   margin: 0;
-  vertical-align: middle;
-  margin-left: 5px;
+  text-align: center;
   margin-top: 12px;
 }
 
@@ -252,12 +329,10 @@ const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice
   }
   .hero-buy-btn {
     font-size: clamp(14px, 2vw, 22px);
-    padding: 10px 36px;
-    margin-top: 38px;
+    padding: 10px 36px 8px;
   }
   .hero-date {
     font-size: clamp(10px, 1vw, 12px);
-    margin-left: 0;
     white-space: nowrap;
   }
 }
@@ -270,12 +345,14 @@ const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice
     margin: 3svh 0 1svh;
   }
   .hero-description { font-size: min(3.2vw, 1.8svh); }
-  .hero-buy-btn { margin-top: 3svh; padding: 8px 36px; }
+  .hero-cta { margin-top: 3svh; }
+  .hero-buy-btn { padding: 8px 36px 6px; }
   .hero-date { margin-top: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .scroll-arrow::after { animation: none; }
+  .countdown-dot { animation: none; }
 }
 
 @media (max-width: 480px) {
