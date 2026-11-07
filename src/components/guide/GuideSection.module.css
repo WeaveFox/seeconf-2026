@@ -1,0 +1,199 @@
+.guide {
+  padding: 48px 0;
+  background: #fff;
+}
+
+.guideContainer {
+  /* base: inherits global .container styles */
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+.section-tag {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--color-text);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.guide-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 64px;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.guide-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guide-hero-title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
+  color: #121212;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.guide-hero-desc {
+  font-size: clamp(16px, 1.8vw, 24px);
+  font-weight: 400;
+  color: rgba(18, 18, 18, 0.5);
+  margin: 0;
+}
+
+.guide-time {
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 400;
+  color: rgba(18, 18, 18, 0.75);
+  margin: 0 0 4px;
+}
+
+.guide-reminder {
+  font-size: clamp(11px, 0.85vw, 13px);
+  font-weight: 400;
+  color: rgba(18, 18, 18, 0.45);
+  margin: 0 0 16px;
+}
+
+.guide-right {
+  display: flex;
+  align-items: center;
+}
+
+.guide-right a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(18, 18, 18, 0.1);
+  border-radius: 20px;
+}
+
+.guide-map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.guide-notice {
+  margin-top: 0;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.guide-notice p {
+  font-size: clamp(12px, 1vw, 15px);
+  color: rgba(18, 18, 18, 0.5);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.guide-notice strong {
+  font-weight: 400;
+  color: rgba(18, 18, 18, 0.75);
+}
+
+.transport-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.transport-card {
+  padding-top: 0;
+}
+
+.transport-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.transport-icon {
+  display: flex;
+  align-items: center;
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.transport-title {
+  font-size: clamp(14px, 1.1vw, 17px);
+  font-weight: 400;
+  color: #121212;
+  margin: 0;
+}
+
+.transport-desc {
+  font-size: clamp(12px, 0.9vw, 14px);
+  color: rgba(18, 18, 18, 0.5);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.transport-list {
+  margin-top: 6px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.transport-list li {
+  font-size: clamp(12px, 0.9vw, 14px);
+  color: rgba(18, 18, 18, 0.5);
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+/* Tablet & mobile: force 2 columns for transport grid */
+@media (max-width: 1024px) {
+  .transport-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guide {
+    padding: 30px 0;
+  }
+
+  .guideContainer {
+    padding: 0 8%;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .guide-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 30px;
+  }
+}

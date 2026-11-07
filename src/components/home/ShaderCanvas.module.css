@@ -1,0 +1,22 @@
+.shader-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Keep the CSS artwork visible until the first complete shader frame. */
+.shader-canvas.ready {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shader-canvas {
+    transition: none;
+  }
+}

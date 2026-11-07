@@ -1,0 +1,47 @@
+:global(.seeconf-hero-cursor-active),
+:global(.seeconf-hero-cursor-active *) {
+  cursor: none !important;
+}
+
+.hero-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.hero-cursor:global(.is-visible) {
+  opacity: 1;
+}
+
+.hero-cursor-dot,
+.hero-cursor-ring {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero-cursor-dot {
+  width: 4px;
+  height: 4px;
+  background: #111b;
+}
+
+.hero-cursor-ring {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #14141425;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cursor {
+    display: none;
+  }
+}
