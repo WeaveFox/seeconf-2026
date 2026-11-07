@@ -1,0 +1,19 @@
+vite.config.js
+  s_f7ba49723212cc::t_a459798ed5b02d 32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dc92604c92dd1ab860f99d1eede096e3a8259dfc",
+  "prompts": {},
+  "sessions": {
+    "s_f7ba49723212cc": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "1eb7ced4-36ca-4a0c-b48a-c1f7479eeb59",
+        "model": "codefuse_official_channel/Kimi-K3.1-Pro:glink_domestic"
+      },
+      "human_author": "hustcc <i@hust.cc>"
+    }
+  }
+}
