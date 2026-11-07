@@ -1,0 +1,18 @@
+.leaving {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.entering {
+  animation: transitionFadeIn 0.2s ease;
+}
+
+@keyframes transitionFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

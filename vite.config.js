@@ -1,4 +1,4 @@
-import vue from '@vitejs/plugin-vue'
+import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { shaderCompiler } from '@galacean/engine-shader-compiler/bundler/rollup'
 
@@ -26,9 +26,6 @@ export default defineConfig({
         emitSources: false,
       },
     }),
-    vue(),
+    react(),
   ],
-  ssgOptions: {
-    script: 'defer',
-  },
 })
