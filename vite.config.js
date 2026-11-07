@@ -29,6 +29,6 @@ export default defineConfig({
     vue(),
   ],
   ssgOptions: {
-    script: 'async',
+    script: 'defer',
   },
 })
