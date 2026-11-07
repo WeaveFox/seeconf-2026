@@ -5,6 +5,13 @@ import ShaderCanvas from './ShaderCanvas.vue'
 import HeroCursor from './HeroCursor.vue'
 
 const watercolorReady = ref(false)
+const enableWatercolor = ref(false)
+let mobileMedia
+
+const updateWatercolor = () => {
+  enableWatercolor.value = !mobileMedia.matches
+  if (!enableWatercolor.value) watercolorReady.value = false
+}
 
 // 票务倒计时
 const activeTier = ref(getActiveTicketTier())
@@ -36,19 +43,23 @@ const onControlContextMenu = (event) => {
 const titleParts = [conferenceInfo.title.slice(0, 6), conferenceInfo.title.slice(6)]
 
 onMounted(() => {
+  mobileMedia = window.matchMedia('(max-width: 768px), (pointer: coarse)')
+  updateWatercolor()
+  mobileMedia.addEventListener('change', updateWatercolor)
   updateCountdown()
   countdownTimer = setInterval(updateCountdown, 1000)
 })
 onUnmounted(() => {
+  mobileMedia?.removeEventListener('change', updateWatercolor)
   clearInterval(countdownTimer)
 })
 </script>
 
 <template>
   <section id="hero" class="hero" :class="{ 'hero-watercolor-ready': watercolorReady }">
-    <ShaderCanvas @ready-change="watercolorReady = $event" />
-    <HeroCursor />
-    <div class="hero-interaction" aria-hidden="true"></div>
+    <ShaderCanvas v-if="enableWatercolor" @ready-change="watercolorReady = $event" />
+    <HeroCursor v-if="enableWatercolor" />
+    <div v-if="enableWatercolor" class="hero-interaction" aria-hidden="true"></div>
     <!-- Main hero text -->
     <div class="hero-title">
       <h1><span class="h1-word">SEE</span> <span class="h1-word">Conf</span></h1>
@@ -82,7 +93,6 @@ onUnmounted(() => {
   background: #f6f6f6 url('https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Yqq2SbdCWdQAAAAAZRAAAAgADiiDAQFr/original') center / cover no-repeat;
 }
 
-/* Keep the scroll control outside the surface that consumes touch panning. */
 .hero-interaction {
   position: absolute;
   inset: 0;
@@ -261,12 +271,6 @@ onUnmounted(() => {
   z-index: 10;
   color: rgba(18, 18, 18, 0.4);
   font-size: 12px;
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .hero-watercolor-ready .hero-interaction,
-  .hero-watercolor-ready .hero-buy-btn { touch-action: pinch-zoom; }
-  .hero-scroll-hint { touch-action: pan-y pinch-zoom; }
 }
 
 .hero-scroll-hint:focus-visible {
