@@ -636,9 +636,9 @@ export const ticketBuyUrl = 'https://www.bagevent.com/event/SEEConf2026'
 // 票档信息
 export const ticketTiers = [
   { id: 'super-early-bird', name: '超级早鸟票', badge: '1024限定', startDate: '2026-10-22T00:00:00', endDate: '2026-10-24T23:59:59', price: 79, quantity: 200 },
-  { id: 'early-bird', name: '早鸟票', badge: '限时', startDate: '2026-10-25T00:00:00', endDate: '2026-11-08T23:59:59', price: 99, quantity: 200, originalPrice: 199 },
-  { id: 'regular', name: '普通票', badge: '', startDate: '2026-11-08T00:00:00', endDate: '2026-11-27T12:00:00', price: 199, quantity: 200, groupNote: '团购票买5赠1 ≈ ¥166/张' },
-  { id: 'group', name: '团购票', badge: '买5赠1', startDate: '2026-11-08T00:00:00', endDate: '2026-11-27T12:00:00', price: 199, quantity: 100, effectivePrice: 166 },
+  { id: 'early-bird', name: '早鸟票', badge: '限时', startDate: '2026-10-25T00:00:00', endDate: '2026-11-12T23:59:59', price: 99, quantity: 200, originalPrice: 199 },
+  { id: 'regular', name: '普通票', badge: '', startDate: '2026-11-13T00:00:00', endDate: '2026-11-27T12:00:00', price: 199, quantity: 200, groupNote: '团购票买5赠1 ≈ ¥166/张' },
+  { id: 'group', name: '团购票', badge: '买5赠1', startDate: '2026-11-13T00:00:00', endDate: '2026-11-27T12:00:00', price: 199, quantity: 100, effectivePrice: 166 },
 ]
 
 // 获取当前生效的优先票档（按数组顺序返回第一个在有效期内的，排除团购票）
