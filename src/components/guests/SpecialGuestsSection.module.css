@@ -91,9 +91,10 @@
   font-size: 20px;
   font-weight: 500;
   color: var(--color-text);
-  margin: -8px 0 4px 36px;
+  margin: -8px 0 4px 0;
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -106,8 +107,10 @@
 .guest-bio {
   font-size: 13px;
   color: var(--color-text-secondary);
-  margin: 0 0 0 36px;
+  margin: 0;
   line-height: 1.6;
+  text-align: center;
+  text-wrap: balance;
 }
 
 @media (max-width: 1024px) {
@@ -150,12 +153,12 @@
   }
 
   .guest-name {
-    margin-left: 16px;
+    margin-left: 0;
     font-size: 14px;
   }
 
   .guest-bio {
-    margin-left: 16px;
+    margin-left: 0;
     font-size: 12px;
   }
 }
