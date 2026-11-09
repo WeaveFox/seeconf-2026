@@ -26,9 +26,6 @@ function parseName(raw) {
   return { name: raw.trim(), nickname: '' }
 }
 
-// 不在分享嘉宾中展示的讲者
-const excludedSpeakers = ['骆骥']
-
 // 从 agendaData 中提取所有分享者（含多讲者拆分）
 function extractAllSpeakers() {
   const speakers = []
@@ -44,7 +41,6 @@ function extractAllSpeakers() {
         const titles = item.speakerTitle.split(' / ')
         for (let i = 0; i < names.length; i++) {
           const parsed = parseName(names[i])
-          if (excludedSpeakers.includes(parsed.name)) continue
           speakers.push({
             name: parsed.name,
             nickname: parsed.nickname,
@@ -55,7 +51,6 @@ function extractAllSpeakers() {
         }
       } else {
         const parsed = parseName(item.speaker)
-        if (excludedSpeakers.includes(parsed.name)) continue
         speakers.push({
           name: parsed.name,
           nickname: parsed.nickname,
