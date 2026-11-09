@@ -420,7 +420,7 @@ export const agendaData = {
       time: '14:50 - 15:15',
       title: 'AI 时代下，普通人也能享受创造的乐趣',
       description: 'AI 的出现，以及 Vibe Coding 的兴起，将创造的成本降低到普通人也可以负担的程度。本次分享从一个生活中的真实小需求着手，分享自己是如何一步步将需求落地成为一个产品，获得第一个用户的好评，从而在 AI 创造中获得乐趣。',
-      speaker: '梁朝凯（朝凯）',
+      speaker: '梁朝凯',
       speakerTitle: 'OPC，AI 产品经理 & 独立开发者',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/M5loTb7x7twAAAAARxAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/v8nqQapTJ4gAAAAASGAAAAgADiiDAQFr/original',
