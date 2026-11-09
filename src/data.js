@@ -401,7 +401,7 @@ export const agendaData = {
     {
       time: '14:00 - 14:25',
       title: 'AI Native 组织通往“无人驾驶”之路',
-      description: '',
+      description: 'Agent 正从「单会话工具」走向连续、高效、主动、持久的 Super-agent，团队的瓶颈也随之从执行转移到交接。当执行不再稀缺，团队的时间真正被消耗在哪里？当一支团队开始同时运行多个这样的 Agent，活由谁派、交接在哪一层完成、结果由谁判断？本次分享将基于 LobeHub 团队内部的协作实践，围绕这些尚未被回答的问题展开，分享过去一年中我们的探索与实践。同时探讨在目标设定、结果验收与责任归属上人的职责边界与未来的组织形态。',
       speaker: '徐文彬（闻冰）',
       speakerTitle: 'LobeHub 创始人 & CEO',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/DjrgR52TrgUAAAAAR6AAAAgADiiDAQFr/original',
