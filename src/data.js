@@ -12,7 +12,7 @@ export const conferenceInfo = {
 }
 
 export const navItems = [
-  // { label: '分享嘉宾', anchor: 'speakers' },
+  { label: '分享嘉宾', anchor: 'speakers' },
   { label: '会议议程', anchor: 'agenda' },
   { label: '特邀嘉宾', anchor: 'guests' },
   { label: '特色展台', anchor: 'expo' },
