@@ -2,6 +2,7 @@ import TheNavbar from './components/home/TheNavbar.jsx'
 import HeroBanner from './components/home/HeroBanner.jsx'
 import StickyTicketBar from './components/home/StickyTicketBar.jsx'
 import AgendaSection from './components/agenda/AgendaSection.jsx'
+import SpeakersSection from './components/speakers/SpeakersSection.jsx'
 import SpecialGuestsSection from './components/guests/SpecialGuestsSection.jsx'
 import ExpoSection from './components/expo/ExpoSection.jsx'
 import PartnersSection from './components/partners/PartnersSection.jsx'
@@ -15,6 +16,8 @@ export default function App() {
       <TheNavbar />
       <main>
         <HeroBanner />
+        <SpeakersSection />
+        <div className={styles['section-divider']}></div>
         <AgendaSection />
         <div className={styles['section-divider']}></div>
         <SpecialGuestsSection />
