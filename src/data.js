@@ -52,7 +52,7 @@ export const sessions = [
       { name: '陈成（云谦）', title: '阿里巴巴 · QoderCLI 高级技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/V9ZWRanRv3EAAAAARqAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/TdnPQ5x4K8MAAAAARoAAAAgADiiDAQFr/original' },
       { name: '曹磊（明是）', title: '蚂蚁集团 · 技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/sy1XRrlnAbEAAAAASGAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/F1HdTpfKBTcAAAAAR4AAAAgADiiDAQFr/original' },
     ],
-    description: '当下 AI 基础模型能力持续提升，考验在于工程落地。模型调优、推理部署、稳定上线、成本管控，每一环都考验硬功夫。本专题聚焦一线难题，抛开纸面理论，探讨研发范式、复杂 Agent 架构与线上 Badcase 理，覆盖工具链和客户端工程实践。汇集蚂蚁、阿里、字节与高校专家经验，拆解 AI 业务闭环，帮从业者把 Demo 推向高质量上线，让 AI 真正跑起来、用起来、创造价值。',
+    description: '当下 AI 基础模型能力持续提升，考验在于工程落地。模型调优、推理部署、稳定上线、成本管控，每一环都考验硬功夫。本专题聚焦一线难题，抛开纸面理论，探讨研发范式、复杂 Agent 架构与线上 Badcase，覆盖工具链和客户端工程实践。汇集蚂蚁、阿里、字节与高校专家经验，拆解 AI 业务闭环，帮从业者把 Demo 推向高质量上线，让 AI 真正跑起来、用起来、创造价值。',
     infoImage: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/RfqVRJOSuwgAAAAAZDAAAAgADiiDAQFr/original',
   },
   {
@@ -184,6 +184,15 @@ export const agendaData = {
       speakerTitle: '蚂蚁集团 · AI 支付产品经理',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/g8c9SpPe5e8AAAAARvAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/kwmASK_FGs8AAAAASGAAAAgADiiDAQFr/original',
+    },
+    {
+      time: '15:15 - 15:40',
+      title: '每个品牌都会有一位 AI 首席营销官：PallasAI Agent CMO 的事件驱动闭环与确定性执行',
+      description: '',
+      speaker: 'Ethan',
+      speakerTitle: 'PallasAI Founder & CEO',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/0HPnQL3_7xoAAAAARiAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Q_BCR6MyHK8AAAAARaAAAAgADiiDAQFr/original',
     },
     {
       time: '15:40 - 15:55',
