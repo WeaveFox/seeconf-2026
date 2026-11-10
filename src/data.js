@@ -215,7 +215,7 @@ export const agendaData = {
     {
       time: '16:20 - 16:45',
       title: '如何面向 Agent 构建工具 - 来自 ego lite 的产品实践',
-      description: '一直以来在科技界都有一个专门的学问叫做人际交互，但今天使用软件的不再仅仅是人，还包含了agent，本分享将围绕着如何面向 agent 构建一个符合agent 最佳体验，实现更快的速度更少的 token 和更高的成功率进行展开',
+      description: '一直以来在科技界都有一个专门的学问叫做人机交互，但今天使用软件的不再仅仅是人，还包含了agent，本分享将围绕着如何面向 agent 构建一个符合agent 最佳体验，实现更快的速度更少的 token 和更高的成功率进行展开',
       speaker: 'Aute',
       speakerTitle: 'ego(lite) Founder',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/2HiaRpLC_g0AAAAARgAAAAgADiiDAQFr/original',
@@ -267,15 +267,6 @@ export const agendaData = {
       speakerTitle: '蚂蚁集团 · 阿福 Harness 架构组负责人',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/aoRoR63nU-sAAAAARjAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/rZJpTpQWUPsAAAAARwAAAAgADiiDAQFr/original',
-    },
-    {
-      time: '15:40 - 15:55',
-      title: '茶歇逛展',
-      description: '',
-      speaker: '',
-      speakerTitle: '',
-      avatarBlue: '',
-      avatarRed: '',
     },
     {
       time: '15:55 - 16:20',
