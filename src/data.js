@@ -16,6 +16,7 @@ export const navItems = [
   { label: '会议议程', anchor: 'agenda' },
   { label: '特邀嘉宾', anchor: 'guests' },
   { label: '特色展台', anchor: 'expo' },
+  { label: '音乐派对', anchor: 'band' },
   { label: '参会指南', anchor: 'guide' },
   { label: '合作伙伴', anchor: 'partners' },
 ]
@@ -170,7 +171,7 @@ export const agendaData = {
     {
       time: '14:25 - 14:50',
       title: '让技术隐去，让生命感浮现 - 具身时代的虚实交互设计与实现',
-      description: '',
+      description: '希望和大家探讨Ai和具身智能时代，和用户的交互方式会如何升级。如何跳出问答式框架，实现同生命般自然的交流。',
       speaker: '项臻（泽西）',
       speakerTitle: '镭萌科技联合创始人',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/RGeySYNiY6MAAAAARXAAAAgADiiDAQFr/original',
@@ -620,6 +621,21 @@ export const exhibitions = [
   { name: '', description: 'AiWork 是蚂蚁数科旗下面向开发者、OPC 以及企业侧、覆盖端到端工作的通用智能体工作台。', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/HZGBSKacAOIAAAAAQzAAAAgADiiDAQFr/original', link: 'https://aiwork.dtagi.cn/', logoHeight: 36 },
 ]
 
+// 乐队表演
+export const bandPerformance = {
+  tag: 'LIVE / 2026',
+  title: '音乐派对',
+  description: '<b>996 乐队</b>携手<b>万塘路 18 号</b>、<b>RichBand</b>、<b>无共识</b>、<b>草台班子</b>等四支内外部知名乐队，首次集结开唱！一场乐队大联欢派对即将上演，多首火爆金曲沉浸式演绎，让会场秒变 Livehouse，让我们一起 high 翻报告厅。',
+  photo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/_cIxTo4RRsAAAAAAgCAAAAgADiiDAQFr/original',
+  bands: [
+    { name: '996 乐队', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Rh15Qo6Nj4AAAAAAQdAAAAgADiiDAQFr/original', scale: 0.65 },
+    { name: '万塘路 18 号', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/gLRXSL4wbfwAAAAAS9AAAAgADiiDAQFr/original', scale: 0.65 },
+    { name: 'RichBand', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/BVJ8R5Vu70YAAAAASFAAAAgADiiDAQFr/original' },
+    { name: '无共识', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/UL-XRqMfU7kAAAAAYZAAAAgADiiDAQFr/original' },
+    { name: '草台班子', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/cYUSR7RE3OsAAAAAY7AAAAgADiiDAQFr/original' },
+  ],
+}
+
 // 合作伙伴（hideName 表示 logo 已含品牌名，不再重复显示名称）
 export const partners = [
   { name: '蚂蚁阿福', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Q86OQ455uroAAAAAS2AAAAgADiiDAQFr/256w_256h', link: '' },
@@ -636,6 +652,8 @@ export const partners = [
   { name: 'AiWork', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/HZGBSKacAOIAAAAAQzAAAAgADiiDAQFr/original', link: 'https://aiwork.dtagi.cn/', hideName: true },
   { name: 'DBAplus', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/MUk0QKztWnMAAAAAQGAAAAgADiiDAQFr/original', link: 'https://dbaplus.cn', hideName: true },
   { name: '理想汇宝厅', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/iK4dSqnXLXgAAAAARCAAAAgADiiDAQFr/original', link: 'https://www.xiaohongshu.com/user/profile/66b0c50e000000001d03308f?xsec_token=YBB6wslBByarX1M1q2D0zKrYnsP5MXeutYEyb0ljfyzdY=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=N0g1OUQ5PE46TEZFSkoxOTc0Tj49SDY5&apptime=1793866605&share_id=042b03b0b5b14a9f8bc501b817c8ecae&track_code=2t77uouGVaP', hideName: true },
+  { name: '', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/193rR4VIMV4AAAAARnAAAAgADiiDAQFr/original', link: '', hideName: true },
+  { name: '', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/ClgmSYNtyfcAAAAAQGAAAAgADiiDAQFr/original', link: '', hideName: true },
 ]
 
 // 往届回顾

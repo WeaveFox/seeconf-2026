@@ -1,0 +1,145 @@
+.band {
+  padding: 42px 0;
+  background: #fff;
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.section-tag {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--color-text);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.band-desc {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.8;
+  margin: 0 0 32px;
+}
+
+.band-desc strong {
+  font-weight: 900;
+}
+
+.band-photo-wrap {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.band-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lineup-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+.band-logos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.band-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.band-logo-img-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.band-logo-item:hover .band-logo-img-wrap {
+  transform: translateY(-4px);
+}
+
+.band-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.band-logo-name {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--color-text);
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .band-logos {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .band {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .band-desc {
+    font-size: 15px;
+  }
+
+  .band-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .band-logo-name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 30px;
+  }
+
+  .band-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .band-desc {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
