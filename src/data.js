@@ -159,6 +159,15 @@ export const agendaData = {
   ],
   'ai-experience': [
     {
+      time: '13:30 - 13:55',
+      title: '乐队表演',
+      description: '',
+      speaker: '996 乐队，完颜',
+      speakerTitle: '',
+      avatarBlue: '',
+      avatarRed: '',
+    },
+    {
       time: '14:00 - 14:25',
       title: '从工具到伙伴 - 蚂蚁灵光的 AI Agent 实践',
       description: '分享蚂蚁灵光在 AI Agent 方向的一些思考和实践。',
