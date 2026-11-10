@@ -626,7 +626,7 @@ export const bandPerformance = {
   tag: 'LIVE / 2026',
   title: '音乐派对',
   description: '<b>996 乐队</b>携手<b>万塘路 18 号</b>、<b>RichBand</b>、<b>无共识</b>、<b>草台班子</b>等四支内外部知名乐队，首次集结开唱！一场乐队大联欢派对即将上演，多首火爆金曲沉浸式演绎，让会场秒变 Livehouse，让我们一起 high 翻报告厅。',
-  photo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/_cIxTo4RRsAAAAAAgCAAAAgADiiDAQFr/original',
+  photo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/f_62T4ft0BQAAAAAgCAAAAgADiiDAQFr/original',
   bands: [
     { name: '996 乐队', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Rh15Qo6Nj4AAAAAAQdAAAAgADiiDAQFr/original', scale: 0.65 },
     { name: '万塘路 18 号', logo: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/gLRXSL4wbfwAAAAAS9AAAAgADiiDAQFr/original', scale: 0.65 },
