@@ -123,7 +123,7 @@ export const agendaData = {
     {
       time: '11:00 - 11:15',
       title: 'AI 生游戏：Galacean 带来的新体验',
-      description: '',
+      description: 'AI 创作正从图文、视频走向游戏与交互式 3D。从一个想法到一款高品质游戏，人和 AI 如何协作？本次分享将结合 Galacean 的 AI-Native 探索与产品实践，介绍 AI 与游戏引擎如何深度协同，提升研发效率、释放创造力，让更多创意成为可玩的作品。',
       speaker: '李俊奎（向秀）、郭磊（尘沫）',
       speakerTitle: '向秀：蚂蚁集团 · 平台工程与技术风险部负责人 / 尘沫：蚂蚁集团 · Galacean 引擎架构师',
       avatarBlue: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/kCI0Tq2EOREAAAAARUAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/YKKrS6m6mSkAAAAAQYAAAAgADiiDAQFr/original'],
