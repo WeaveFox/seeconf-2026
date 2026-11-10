@@ -188,7 +188,7 @@ export const agendaData = {
     {
       time: '15:15 - 15:40',
       title: '每个品牌都会有一位 AI 首席营销官：PallasAI Agent CMO 的事件驱动闭环与确定性执行',
-      description: '',
+      description: '营销的战场在延伸，营销的工作模式在 Agent 下也需要有差异，我们认为每个企业都需要一位永远在线的 Agent 首席营销官。本次分享会介绍 PallasAI Agent CMO 在营销领域的创新设计和体验优化。',
       speaker: 'Ethan',
       speakerTitle: 'PallasAI Founder & CEO',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/0HPnQL3_7xoAAAAARiAAAAgADiiDAQFr/original',
@@ -233,11 +233,11 @@ export const agendaData = {
     {
       time: '17:20 - 17:45',
       title: '工具之外：我们如何创造一个机器人角色',
-      description: 'LOOI 机器人的创造者，致力于设计和构建具有生命感、主体性、能够参与真实生活的机器人伙伴。在技术与人文的交汇处探索，笃信工具与效率之外的价值。',
+      description: '',
       speaker: '张晓辉',
       speakerTitle: '可触未来创始人',
-      avatarBlue: '',
-      avatarRed: '',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/kUseS5vBYVIAAAAAReAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/lFc1SI5PmZoAAAAARdAAAAgADiiDAQFr/original',
     },
   ],
   'ai-engineering': [
@@ -317,10 +317,10 @@ export const agendaData = {
       time: '17:20 - 17:40',
       title: '编码效率之外，聊聊 AI Coding 下半场的瓶颈观与未来之问',
       description: 'AI 让编码提效 10 倍，但产出暴增后，人的注意力成了新瓶颈。结合 Nomos 的规模化实践，我们直面下半场最核心的两道墙——评审与交付：不再逐行看代码，凭什么敢让 Agent 自动合入？内部代码产出翻倍，为何真正发到生产的代码却未同步增长？本次分享从一线探索与踩坑出发，聊聊我们在构建「可信代码」证据链上的思考与尝试，并抛出面对评审和交付阻力时，对 AI 研发下半场的瓶颈观与未来之问。',
-      speaker: '向野',
-      speakerTitle: '蚂蚁集团技术专家',
-      avatarBlue: '',
-      avatarRed: '',
+      speaker: '杨英明（向野）',
+      speakerTitle: '蚂蚁集团 · 技术专家',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/iLMgQICL6n4AAAAARbAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/mSX7TpwzJmgAAAAARjAAAAgADiiDAQFr/original',
     },
   ],
   'ai-interaction': [
