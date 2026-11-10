@@ -5,6 +5,7 @@ import AgendaSection from './components/agenda/AgendaSection.jsx'
 import SpeakersSection from './components/speakers/SpeakersSection.jsx'
 import SpecialGuestsSection from './components/guests/SpecialGuestsSection.jsx'
 import ExpoSection from './components/expo/ExpoSection.jsx'
+import BandSection from './components/band/BandSection.jsx'
 import PartnersSection from './components/partners/PartnersSection.jsx'
 import GuideSection from './components/guide/GuideSection.jsx'
 import TheFooter from './components/footer/TheFooter.jsx'
@@ -23,6 +24,8 @@ export default function App() {
         <SpecialGuestsSection />
         <div className={styles['section-divider']}></div>
         <ExpoSection />
+        <div className={styles['section-divider']}></div>
+        <BandSection />
         <div className={styles['section-divider']}></div>
         <GuideSection />
         <div className={styles['section-divider']}></div>

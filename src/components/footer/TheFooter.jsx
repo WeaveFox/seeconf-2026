@@ -16,6 +16,7 @@ const navColumns = [
       { label: '分享嘉宾', anchor: 'speakers' },
       { label: '特邀嘉宾', anchor: 'guests' },
       { label: '特色展台', anchor: 'expo' },
+      { label: '音乐派对', anchor: 'band' },
       { label: '参会指南', anchor: 'guide' },
       { label: '合作伙伴', anchor: 'partners' },
     ],
