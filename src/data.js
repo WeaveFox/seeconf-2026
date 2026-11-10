@@ -159,15 +159,6 @@ export const agendaData = {
   ],
   'ai-experience': [
     {
-      time: '13:30 - 13:55',
-      title: '乐队表演',
-      description: '',
-      speaker: '996 乐队，完颜',
-      speakerTitle: '',
-      avatarBlue: '',
-      avatarRed: '',
-    },
-    {
       time: '14:00 - 14:25',
       title: '从工具到伙伴 - 蚂蚁灵光的 AI Agent 实践',
       description: '分享蚂蚁灵光在 AI Agent 方向的一些思考和实践。',
@@ -238,6 +229,15 @@ export const agendaData = {
       speakerTitle: '阿里巴巴 · AI 研发工程师',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/x0F0TYTa3RUAAAAARRAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/_JY1SIF8YI0AAAAARVAAAAgADiiDAQFr/original',
+    },
+    {
+      time: '17:20 - 17:45',
+      title: '工具之外：我们如何创造一个机器人角色',
+      description: 'LOOI 机器人的创造者，致力于设计和构建具有生命感、主体性、能够参与真实生活的机器人伙伴。在技术与人文的交汇处探索，笃信工具与效率之外的价值。',
+      speaker: '张晓辉',
+      speakerTitle: '可触未来创始人',
+      avatarBlue: '',
+      avatarRed: '',
     },
   ],
   'ai-engineering': [
