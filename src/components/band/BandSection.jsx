@@ -24,7 +24,7 @@ export default function BandSection() {
               <div className={styles['band-logo-img-wrap']}>
                 <img src={band.logo} alt={band.name} className={styles['band-logo']} style={band.scale ? { maxWidth: `${band.scale * 100}%` } : null} />
               </div>
-              <p className={styles['band-logo-name']}>{band.name}</p>
+              <p className={styles['band-logo-name']}><b>{band.name}</b></p>
             </div>
           ))}
         </div>
