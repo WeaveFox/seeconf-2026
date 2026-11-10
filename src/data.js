@@ -319,7 +319,7 @@ export const agendaData = {
       description: 'AI 让编码提效 10 倍，但产出暴增后，人的注意力成了新瓶颈。结合 Nomos 的规模化实践，我们直面下半场最核心的两道墙——评审与交付：不再逐行看代码，凭什么敢让 Agent 自动合入？内部代码产出翻倍，为何真正发到生产的代码却未同步增长？本次分享从一线探索与踩坑出发，聊聊我们在构建「可信代码」证据链上的思考与尝试，并抛出面对评审和交付阻力时，对 AI 研发下半场的瓶颈观与未来之问。',
       speaker: '杨英明（向野）',
       speakerTitle: '蚂蚁集团 · 技术专家',
-      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/iLMgQICL6n4AAAAARbAAAAgADiiDAQFr/original',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/uG0iRpOjV9YAAAAARhAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/mSX7TpwzJmgAAAAARjAAAAgADiiDAQFr/original',
     },
   ],
