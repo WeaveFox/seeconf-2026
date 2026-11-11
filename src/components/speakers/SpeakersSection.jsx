@@ -61,7 +61,7 @@ function extractAllSpeakers() {
       }
     }
   }
-  return speakers
+  return speakers.filter(s => s.avatarBlue || s.avatarRed)
 }
 
 export default function SpeakersSection() {
