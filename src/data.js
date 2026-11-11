@@ -132,15 +132,6 @@ export const agendaData = {
     },
     {
       time: '11:15 - 11:30',
-      title: '主题演讲',
-      description: '',
-      speaker: '',
-      speakerTitle: '',
-      avatarBlue: '',
-      avatarRed: '',
-    },
-    {
-      time: '',
       title: '大会发布',
       description: '',
       speaker: '',
@@ -149,8 +140,12 @@ export const agendaData = {
       avatarRed: '',
     },
     {
-      time: '',
+      time: '11:30 - 12:15',
       title: '圆桌论坛',
+      participants: [
+        { role: '对话嘉宾', names: '郭旻杭（臻儿）、郭虹宇（老郭）、元彦、阴明' },
+        { role: '主持人', names: 'winter' },
+      ],
       description: '',
       speaker: '',
       speakerTitle: '',
