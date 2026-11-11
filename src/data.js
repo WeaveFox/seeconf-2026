@@ -196,7 +196,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/Q_BCR6MyHK8AAAAARaAAAAgADiiDAQFr/original',
     },
     {
-      time: '15:40 - 15:55',
+      time: '15:40 - 16:05',
       title: '茶歇逛展',
       description: '',
       speaker: '',
@@ -205,7 +205,7 @@ export const agendaData = {
       avatarRed: '',
     },
     {
-      time: '15:55 - 16:20',
+      time: '16:05 - 16:30',
       title: '从内部工具到商业化产品：QMuse 的产品演进与实践',
       description: '分享用户群体的变化、使用场景的变化，以及商业化考虑、成本考虑，促使产品发展中的一系列实践和思考。',
       speaker: '彭佩乔（乔杨）',
@@ -214,7 +214,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/uRKzTK2TZ4oAAAAASPAAAAgADiiDAQFr/original',
     },
     {
-      time: '16:20 - 16:45',
+      time: '16:30 - 16:55',
       title: '如何面向 Agent 构建工具 - 来自 ego lite 的产品实践',
       description: '一直以来在科技界都有一个专门的学问叫做人机交互，但今天使用软件的不再仅仅是人，还包含了agent，本分享将围绕着如何面向 agent 构建一个符合agent 最佳体验，实现更快的速度更少的 token 和更高的成功率进行展开',
       speaker: 'Aute',
@@ -223,7 +223,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fJXJQK8Fo3wAAAAARgAAAAgADiiDAQFr/original',
     },
     {
-      time: '16:45 - 17:10',
+      time: '16:55 - 17:20',
       title: '当设计经验开始自我进化：TaoDesign 的探索与实践',
       description: '如何让设计师积累的专业经验，成为更多人可以使用的创作能力，并推动业务想法快速落地？本次分享将以 TaoDesign 在淘天电商场景中的探索为例，介绍如何将设计师的经验与方法沉淀为 AI 可理解、可调用的设计资产，通过使用反馈与持续评估推动资产自进化；如何让 AI 工具运用这些资产，帮助专业人士提升创作效率，让非设计专业人士也能表达、验证想法，拓展职能边界；以及如何将 AI 创作的设计稿连接到需求表达、方案确认、研发实现与验收交付，贯通电商企业的需求交付流程。为设计、产品与研发团队提供从经验沉淀到业务交付的实践参考。',
       speaker: '刘晨凌（卓凌）',
@@ -362,7 +362,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/ChCtTrG_BPoAAAAASZAAAAgADiiDAQFr/original',
     },
     {
-      time: '15:40 - 15:55',
+      time: '15:40 - 16:05',
       title: '茶歇逛展',
       description: '',
       speaker: '',
@@ -371,7 +371,7 @@ export const agendaData = {
       avatarRed: '',
     },
     {
-      time: '15:55 - 16:20',
+      time: '16:05 - 16:30',
       title: '支付宝 App 灵动执行及小程序 AI',
       description: 'AI 如何从"回答问题"走向"帮用户办事"？本次分享将介绍支付宝小程序 AI 探索两条路线：1. 灵动执行复用已有小程序，由 AI 代用户完成页面操作，任务可在屏、离屏推进，用户按需查看或接管；2. 小程序 Agent 支持开发者将业务功能和交互组件封装为 AI 可调用的技能，在对话中提供服务。结合政务查询、餐饮点单、购券核销等场景，分享两条路线的关键设计与落地经验，探索更自然、便捷的智能服务体验。',
       speaker: '张戈弋（崚枫）',
@@ -380,7 +380,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/sYQ0Tr9-enUAAAAARpAAAAgADiiDAQFr/original',
     },
     {
-      time: '16:20 - 16:45',
+      time: '16:30 - 16:55',
       title: '从草案到大规模实践：MoQ/RTQ 在 AI 多模态实时交互中的落地',
       description: '如何让新一代媒体传输协议跟上 AI 多模态实时交互对低延迟、可靠性和多端一致体验的要求，并让 IETF 草案阶段的 MoQ 真正走向大规模生产落地？本次分享将以 MoQ/RTQ 在 AI 语音助手、实时数字人、多模态 Agent 等交互场景中的实践为例，介绍如何基于 XQUIC 落地 Media over QUIC，用 0-RTT、FEC、目录协商、码率自适应与时间同步等能力把端到端建连与传输延迟压至百毫秒级，让 AI 会话获得"开口即响应"的体验，为实时打断、连续对话等交互范式提供传输层保障',
       speaker: '彭玉堂（巴格）',
@@ -389,7 +389,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/u_5dTKszQHIAAAAAR5AAAAgADiiDAQFr/original',
     },
     {
-      time: '16:45 - 17:10',
+      time: '16:55 - 17:20',
       title: 'Agent 研发工作台 —— WeaveFox 的设计与实践',
       description: 'Agent 正在承担越来越多的编码工作，如何让它持续推进需求、交付成品，人又如何和 Agent 深入协作？本次分享将介绍 WeaveFox 在 Agent 研发工作台上的探索：通过 Loop develop 建立开发、验证与修复的循环，通过领域专家 Agent 的分工接力推进复杂任务，通过支线会话、信息呈现与并发管理支持人的便捷掌控，并连接桌面端、云端与移动端。我们将分享 WeaveFox Agent 工作台在企业研发场景的落地实践，以及通过开源与可定制化，打造小微企业和个人专属的 Agent 工作台。',
       speaker: '朱文涛（亦池）',
@@ -398,7 +398,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/j_4CS6jB1tYAAAAASEAAAAgADiiDAQFr/original',
     },
     {
-      time: '17:10 - 17:35',
+      time: '17:20 - 17:45',
       title: '多模态 AI 交互-蚁小保 VUI',
       description: '蚁小保 VUI 是融入用户现场的多模态 AI 保险助手，通过实时语音、同屏理解与视频交互，结合前后台 Agent 协同，让用户边说、边看、边办，将理解场景、组织信息的复杂性交给 AI，降低提问与沟通负担，打造少解释、更自然、有陪伴感的保险服务体验。',
       speaker: '郁玉涛（郁哉）',
@@ -437,7 +437,7 @@ export const agendaData = {
     },
     {
       time: '15:15 - 15:40',
-      title: '小萨，主动式 Agent 的企业级设计与 PA 架构思考',
+      title: '小萨，从连接到共事，主动式 Agent 的设计与 PA 架构思考',
       description: '企业协同发生在持续流动的沟通、决策与行动之中。如何让 Agent 理解协作现场、连接分散的信息，并在合适的时机主动参与，是 AI 融入组织的一项重要课题。本次分享将以小萨的实践为线索，介绍我们如何通过驻扎一线钉群、连接企业内部平台，以及对上下文工程与主动式能力的持续探索，让 Agent 在真实协作中理解背景、承接任务、参与跟进。围绕上下文的延续、组织注意力的消耗与 AI 能力的日常应用，分享其中的产品思考、技术实践与经验，探索 Agent 从被动响应走向主动协同，以及企业在 AI 时代演进协作方式的可能。',
       speaker: '丁文涛（石骆）',
       speakerTitle: '蚂蚁集团 · AI 全栈工程师',
@@ -445,7 +445,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/HYFHR6s0kaEAAAAARbAAAAgADiiDAQFr/original',
     },
     {
-      time: '15:40 - 15:55',
+      time: '15:40 - 16:05',
       title: '茶歇逛展',
       description: '',
       speaker: '',
@@ -454,7 +454,7 @@ export const agendaData = {
       avatarRed: '',
     },
     {
-      time: '15:55 - 16:20',
+      time: '16:05 - 16:30',
       title: 'AI 时代的跨平台选择，使用 GPUI 打造丝滑体验',
       description: 'Agent Coding 几乎解决了开发者需要关注的技术细节问题，节省了大量的编码时间，让开发者可以更专注创意，设计，以及体验。我将聊聊我是怎样在密集涌现的同类产品中重新思考，从十年前的设计稿，到编辑器技术瓶颈，到借助 AI 友好的 Rust 和GPUI 持续迭代，打造一个更少 AI Slop，更多手作灵魂感的小而美的产品的。',
       speaker: 'Nydus（严松）',
@@ -463,7 +463,7 @@ export const agendaData = {
       avatarRed: '',
     },
     {
-      time: '16:20 - 16:45',
+      time: '16:30 - 16:55',
       title: '从意图识别到主动服务：构建效果驱动的 Agent 服务闭环',
       description: '用户的问题往往具体而分散。同样是“退款去哪了”，有人关心退款抵扣了哪期账单，有人不明白退款后为什么仍要还款。这类中长尾需求数量多、变化快，逐项提需求、排期开发，很难兼顾覆盖与成本。本次分享以花呗退款主动服务为例，介绍一套从意图识别到主动服务的 Agent 闭环：从用户行为中形成有证据的理解并沉淀为意图资产，经多智能体推演和可靠交付转化为服务，再通过分层效果验证把反馈转化为持续改进。分享还将探讨模型与规则如何分工，以及自动化与人工把关的边界。',
       speaker: '姚晨阳（黄霸）、张泽（拾迹）',
@@ -472,13 +472,13 @@ export const agendaData = {
       avatarRed: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/4u-JSLNoTTEAAAAASFAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/nIsBQKobgL0AAAAAR_AAAAgADiiDAQFr/original'],
     },
     {
-      time: '16:45 - 17:10',
+      time: '16:55 - 17:20',
       title: 'Sante-Live：数字化"望闻问切"的音视频智能体架构',
       description: '本次分享介绍 Sante-Live 双工音视频智能体架构对数字化"望闻问切"的探索和展望：以持续视觉观测捕捉非语言线索、主动引导检查；以全双工交互支持边听边说、自然打断与灵活应答；以后台 Agent 融合医学知识、个人健康信息与阶段目标，开展推理和规划；以视频非接触估计与可穿戴设备数据融合，持续感知生理与活动状态。让 AI 从被动问答工具升级为全程感知、主动协作的健康伙伴。',
       speaker: '丁菁汀（义谋）',
-      speakerTitle: '',
-      avatarBlue: '',
-      avatarRed: '',
+      speakerTitle: '蚂蚁集团 · 阿福音视频感知交互负责人',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/n1-KTKgd6fgAAAAARoAAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/-wxaSbjoWawAAAAAR7AAAAgADiiDAQFr/original',
     },
   ],
 }
