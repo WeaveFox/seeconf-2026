@@ -212,6 +212,16 @@ export default function AgendaSection() {
                   )}
                   <div className={styles['timeline-content']}>
                     <h3 className={styles['timeline-title']}>{item.title}</h3>
+                    {item.participants && (
+                      <dl className={styles['timeline-participants']}>
+                        {item.participants.map(({ role, names }) => (
+                          <div key={role}>
+                            <dt>{role}</dt>
+                            <dd>{names}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    )}
                     {item.description && (
                       <p
                         className={`${styles['timeline-desc']} ${isExpanded(index) ? styles.expanded : ''} ${!isLongDesc(item) ? styles['no-clamp'] : ''}`}

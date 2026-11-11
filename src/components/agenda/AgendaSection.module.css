@@ -281,6 +281,29 @@
 }
 
 /* 纵向 timeline */
+.timeline-participants {
+  margin: 12px 0 4px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.timeline-participants > div {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.timeline-participants dt {
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.timeline-participants dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .timeline {
   position: relative;
   padding: 0 0 0 72px;
