@@ -279,7 +279,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/rZJpTpQWUPsAAAAARwAAAAgADiiDAQFr/original',
     },
     {
-      time: '15:55 - 16:20',
+      time: '15:40 - 16:05',
       title: 'Rstack: 从高性能工具链到 Agent 友好',
       description: 'Rstack 是一组面向 JavaScript 开发者的高性能工具链，底层基于 Rspack。过去，工具链的服务对象主要是人；而在 Agent 时代，工具链还需要服务于 Agent，这带来了新的挑战，也对工具链的设计提出了更高要求。本次分享将介绍团队在高性能工具链与 Agent 结合方面的探索，并结合 Rspress、SWC-next 的项目开发与 Rstack 生态建设实践，分享相关的设计思路与实践经验。',
       speaker: '孙奕腾',
@@ -288,7 +288,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/6GhxR4pTENkAAAAARPAAAAgADiiDAQFr/original',
     },
     {
-      time: '16:20 - 16:45',
+      time: '16:05 - 16:30',
       title: 'Agent 重构组织协作：从人机接力到全链路自动化',
       description: 'AI 写代码越来越快，团队怎样才能交付得更快、更好？本次分享将结合真实业务案例，带你理解"自动化滑块"的实践方法：围绕不同场景选择合适的自动化程度，把 Agent 的能力转化为团队整体的交付提速。你将看到，团队如何从局部尝试走向更大范围的自动化，并根据 Agent 能力升级和业务实践持续调整，让自动化融入日常研发，逐步构建一座越用越强的 AI 软件工厂。',
       speaker: '王建明（涧鸣）',
@@ -297,7 +297,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/FWLOS5_VqukAAAAARfAAAAgADiiDAQFr/original',
     },
     {
-      time: '16:45 - 17:10',
+      time: '16:30 - 16:55',
       title: '支付宝客户端 HAKU AI 工程',
       description: '本次分享结合支付宝客户端 HAKU 的建设实践，拆解在存量复杂客户端工程下，面向 AI Native 的研发工程体系设计与落地思路。将重点介绍如何沉淀与组织工程知识、串联研发工具链、打通全链路研发流程，让 AI 读懂跨端、跨模块的大型客户端工程，支撑从需求分析、开发、测试到交付的全环节研发任务，以及面向 AI 研发能力的持续评测体系与效果度量方案，保障 AI 研发交付工程持续迭代；并探讨如何打造 AI 友好的工程架构，适配跨端、跨模块协同开发。分享将搭配真实落地案例，展示这套体系在客户端大规模研发中的运行模式，为大型客户端团队落地 AI Native 工程体系提供可复用的实践思路。',
       speaker: '齐普（远睎）',
@@ -306,7 +306,7 @@ export const agendaData = {
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/9MSFQ4jtPPsAAAAARVAAAAgADiiDAQFr/original',
     },
     {
-      time: '17:10 - 17:35',
+      time: '16:55 - 17:20',
       title: '高质量上下文 - 从共识原型-共识系分-Coding Loop 到发布',
       description: '"业产研新范式"以共享上下文为主线，推动产品、设计与研发从共识原型、共识系分到编码、联调、自测和上线审批形成完整 Loop。通过统一工作空间、知识库、任务状态与过程轨迹，让需求意图准确传递、跨系统协作高效衔接，形成高质量的上下文，并借助 Human in Loop 机制保障关键操作安全可控、任务可暂停恢复、结果全程可追溯，最终实现从业务构想到高质量交付的一体化协作。',
       speaker: '吕晨晨（励学）',
