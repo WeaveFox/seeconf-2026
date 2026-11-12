@@ -253,10 +253,12 @@ export default function AgendaSection() {
                           ))}
                         </div>
                       )}
-                      <div className={styles['guest-meta']}>
-                        <strong>{item.speaker}</strong>
-                        {item.speakerTitle && <span>{item.speakerTitle}</span>}
-                      </div>
+                      {item.speaker && !item.participants && (
+                        <div className={styles['guest-meta']}>
+                          <strong>{item.speaker}</strong>
+                          {item.speakerTitle && <span>{item.speakerTitle}</span>}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
