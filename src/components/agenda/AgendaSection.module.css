@@ -287,7 +287,7 @@
   line-height: 1.7;
 }
 
-.timeline-participants > div {
+.timeline-participants>div {
   display: flex;
   gap: 12px;
   margin-top: 4px;
@@ -457,7 +457,7 @@
 }
 
 .guest-avatars .guest-avatar:not(:only-child) {
-  width: 130px;
+  width: 145px;
 }
 
 .guest-avatars .guest-avatar:not(:first-child) {
@@ -641,7 +641,7 @@
   }
 
   .guest-avatars .guest-avatar:not(:only-child) {
-    width: 95px;
+    width: 110px;
   }
 
   .guest-avatars .guest-avatar:not(:first-child) {
