@@ -202,7 +202,7 @@ export default function AgendaSection() {
               {currentAgenda.map((item, index) => (
                 <div
                   key={index}
-                  className={`${styles['timeline-item']} ${isLongDesc(item) ? styles['has-desc'] : ''}`}
+                  className={`${styles['timeline-item']} ${item.participants ? styles['timeline-item--roundtable'] : ''} ${isLongDesc(item) ? styles['has-desc'] : ''}`}
                 >
                   <span className={`${styles['timeline-badge']} ${styles[getBadgeClass(index)]}`}></span>
                   {item.time && (

@@ -3,6 +3,10 @@
   background: #fff;
 }
 
+.agenda > :global(.container) {
+  max-width: 1440px;
+}
+
 /* 切换专题过渡动画由 TransitionOutIn 组件处理 */
 
 .section-header {
@@ -322,7 +326,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 24px;
   padding: 8px 0;
 }
 
@@ -362,11 +366,12 @@
 
 .timeline-content {
   flex: 1;
+  min-width: 0;
 }
 
 .timeline-time-col {
   flex-shrink: 0;
-  width: 120px;
+  width: 112px;
 }
 
 .timeline-time {
@@ -466,11 +471,27 @@
 
 .guest-avatars.guest-avatars--roundtable {
   gap: 8px;
+  max-width: 100%;
 }
 
 .guest-avatars.guest-avatars--roundtable .guest-avatar {
-  width: 100px;
+  width: 84px;
   margin-left: 0;
+}
+
+/* 圆桌在中等屏幕上将头像移到正文下方，保留完整的标题和嘉宾名单。 */
+@media (min-width: 769px) and (max-width: 1280px) {
+  .timeline-item--roundtable {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    column-gap: 24px;
+    row-gap: 12px;
+    padding: 16px 0;
+  }
+
+  .timeline-item--roundtable .timeline-guest {
+    grid-column: 2;
+  }
 }
 
 .guest-meta {
@@ -657,8 +678,15 @@
     margin-left: -20px;
   }
 
+  .guest-avatars.guest-avatars--roundtable {
+    width: 100%;
+    max-width: 436px;
+    gap: 8px;
+  }
+
   .guest-avatars.guest-avatars--roundtable .guest-avatar {
-    width: 80px;
+    width: calc((100% - 40px) / 6);
+    margin-left: 0;
   }
 
   .guest-meta {
@@ -744,7 +772,7 @@
   }
 
   .guest-avatars.guest-avatars--roundtable .guest-avatar {
-    width: 52px;
+    width: calc((100% - 20px) / 6);
   }
 
   .guest-meta strong {
