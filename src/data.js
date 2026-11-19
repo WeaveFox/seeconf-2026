@@ -141,16 +141,16 @@ export const agendaData = {
     },
     {
       time: '11:30 - 12:15',
-      title: '圆桌论坛',
+      title: '圆桌论坛：创造的边界，应用的未来',
       participants: [
-        { role: '对话嘉宾', names: '臻儿、老郭、元彦、阴明' },
         { role: '主持人', names: 'winter' },
+        { role: '对话嘉宾', names: '臻儿、老郭、元彦、阴明' },
       ],
       description: '',
-      speaker: '郭旻桢（臻儿）、郭虹宇（老郭）、曹元彦（元彦）、阴明、程劭非（winter）',
-      speakerTitle: '郭旻桢（臻儿）：蚂蚁集团 · 支付宝 AI 创新产品中心负责人 / 郭虹宇（老郭）：淘天集团 · 淘宝终端技术负责人 / 元彦：Personal Agent 产品负责人 / 阴明：独立开发者 / 程劭非（winter）：',
-      avatarBlue: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/AEw4R6TeJz8AAAAAT4AAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/vOQsQaDz3aIAAAAARZAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/XUxRRYV9T4sAAAAARtAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/TxBoS57SaAwAAAAARpAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/C8ILS5aMjSwAAAAARwAAAAgADiiDAQFr/original'],
-      avatarRed: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/2wYgTIWsUMkAAAAAReAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/OFAvSqqWqk0AAAAARqAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/mf0hQbayLA4AAAAARkAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/_WrfR5wryUsAAAAARvAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/nDkbQ4FWNYYAAAAARxAAAAgADiiDAQFr/original'],
+      speaker: '程劭非（winter）、郭旻桢（臻儿）、郭虹宇（老郭）、曹元彦（元彦）、阴明',
+      speakerTitle: '程劭非（winter）： / 郭旻桢（臻儿）：蚂蚁集团 · 支付宝 AI 创新产品中心负责人 / 郭虹宇（老郭）：淘天集团 · 淘宝终端技术负责人 / 元彦：Personal Agent 产品负责人 / 阴明：独立开发者',
+      avatarBlue: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/C8ILS5aMjSwAAAAARwAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/AEw4R6TeJz8AAAAAT4AAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/vOQsQaDz3aIAAAAARZAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/XUxRRYV9T4sAAAAARtAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/TxBoS57SaAwAAAAARpAAAAgADiiDAQFr/original'],
+      avatarRed: ['https://mdn.alipayobjects.com/huamei_m96plz/afts/img/nDkbQ4FWNYYAAAAARxAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/2wYgTIWsUMkAAAAAReAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/OFAvSqqWqk0AAAAARqAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/mf0hQbayLA4AAAAARkAAAAgADiiDAQFr/original', 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/_WrfR5wryUsAAAAARvAAAAgADiiDAQFr/original'],
     },
   ],
   'ai-experience': [
