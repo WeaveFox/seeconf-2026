@@ -241,7 +241,7 @@ export default function AgendaSection() {
                   {hasSpeaker(item) && (
                     <div className={styles['timeline-guest']}>
                       {hasAvatar(item) && (
-                        <div className={styles['guest-avatars']}>
+                        <div className={`${styles['guest-avatars']} ${item.participants ? styles['guest-avatars--roundtable'] : ''}`}>
                           {getAvatarList(item, index).map((avatarUrl, avatarIdx) => (
                             <img
                               key={avatarIdx}

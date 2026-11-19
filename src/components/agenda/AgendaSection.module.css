@@ -464,6 +464,15 @@
   margin-left: -30px;
 }
 
+.guest-avatars.guest-avatars--roundtable {
+  gap: 8px;
+}
+
+.guest-avatars.guest-avatars--roundtable .guest-avatar {
+  width: 100px;
+  margin-left: 0;
+}
+
 .guest-meta {
   display: flex;
   flex-direction: column;
@@ -648,6 +657,10 @@
     margin-left: -20px;
   }
 
+  .guest-avatars.guest-avatars--roundtable .guest-avatar {
+    width: 80px;
+  }
+
   .guest-meta {
     width: auto;
   }
@@ -724,6 +737,14 @@
 
   .guest-avatars .guest-avatar:not(:first-child) {
     margin-left: -15px;
+  }
+
+  .guest-avatars.guest-avatars--roundtable {
+    gap: 4px;
+  }
+
+  .guest-avatars.guest-avatars--roundtable .guest-avatar {
+    width: 52px;
   }
 
   .guest-meta strong {
