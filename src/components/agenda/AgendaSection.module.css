@@ -3,10 +3,6 @@
   background: #fff;
 }
 
-.agenda > :global(.container) {
-  max-width: 1440px;
-}
-
 /* 切换专题过渡动画由 TransitionOutIn 组件处理 */
 
 .section-header {
