@@ -83,7 +83,7 @@ export default function HeroBanner() {
             <span className={styles['btn-label']}>立即购票<span className={styles['btn-arrow']}>↗</span></span>
             {showCountdown && (
               <span className={styles['btn-sub']}>
-                <span className={styles['countdown-dot']}></span>早鸟票&nbsp;<b className={styles['btn-price']}>¥{activeTier.price}</b>&nbsp;{activeTier.originalPrice && <s className={styles['btn-price-strike']}>¥{activeTier.originalPrice}</s>}&nbsp;·&nbsp;仅剩&nbsp;{countdown.days > 0 && <span>{countdown.days}&nbsp;天&nbsp;</span>}{pad2(countdown.hours)}:{pad2(countdown.minutes)}:{pad2(countdown.seconds)}
+                <span className={styles['countdown-dot']}></span>{activeTier.name}&nbsp;<b className={styles['btn-price']}>¥{activeTier.price}</b>&nbsp;{activeTier.originalPrice && <s className={styles['btn-price-strike']}>¥{activeTier.originalPrice}</s>}&nbsp;·&nbsp;仅剩&nbsp;{countdown.days > 0 && <span>{countdown.days}&nbsp;天&nbsp;</span>}{pad2(countdown.hours)}:{pad2(countdown.minutes)}:{pad2(countdown.seconds)}
               </span>
             )}
           </a>
