@@ -1,0 +1,40 @@
+src/components/footer/TheFooter.jsx
+  s_11701853ca5ce2::t_7c3b28bdbddb66 22
+src/components/home/TheNavbar.jsx
+  s_11701853ca5ce2::t_81fd7d2f2a6194 36-38
+  s_11701853ca5ce2::t_1f1d3206f0fa28 39-40,44,46
+src/components/faq/FAQSection.jsx
+  s_11701853ca5ce2::t_6bd5f0cede3a63 1-53,55-56,58-67
+  s_11701853ca5ce2::t_08cbfa1e8f4211 54,57
+src/components/faq/FAQSection.module.css
+  s_11701853ca5ce2::t_7f9a76938183d9 1-2,4-56,62-97,104-144
+  s_11701853ca5ce2::t_3d5eeb0ba288d3 57-61
+  s_11701853ca5ce2::t_243573ce148e12 3
+  s_11701853ca5ce2::t_639053ffe39937 98-103
+src/data.js
+  s_11701853ca5ce2::t_ed597965c193dd 36
+  s_11701853ca5ce2::t_345ad49a7e56cf 22
+  s_11701853ca5ce2::t_c4883781386119 28
+  s_11701853ca5ce2::t_be22cfd1c79927 25-27,29-35,37
+  s_11701853ca5ce2::t_58a8d1366539d8 23-24
+src/App.jsx
+  s_11701853ca5ce2::t_db02048dc252ac 35
+  s_11701853ca5ce2::t_af8b2b97c98b6c 11
+  s_11701853ca5ce2::t_86c27eb60d9ebb 36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1bb03e6bf024ec432696051d14a3117fd68416a2",
+  "prompts": {},
+  "sessions": {
+    "s_11701853ca5ce2": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "c6dccdf6-e02d-41f1-8abf-dc62fef1e000",
+        "model": "codefuse_official_channel/Kimi-K3.1-Pro:glink_domestic"
+      },
+      "human_author": "hustcc <i@hust.cc>"
+    }
+  }
+}
