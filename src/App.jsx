@@ -8,6 +8,7 @@ import ExpoSection from './components/expo/ExpoSection.jsx'
 import BandSection from './components/band/BandSection.jsx'
 import PartnersSection from './components/partners/PartnersSection.jsx'
 import GuideSection from './components/guide/GuideSection.jsx'
+import FAQSection from './components/faq/FAQSection.jsx'
 import TheFooter from './components/footer/TheFooter.jsx'
 import styles from './App.module.css'
 
@@ -30,6 +31,8 @@ export default function App() {
         <GuideSection />
         <div className={styles['section-divider']}></div>
         <PartnersSection />
+        <div className={styles['section-divider']}></div>
+        <FAQSection />
         <div className={styles['section-divider']}></div>
       </main>
       <TheFooter />
