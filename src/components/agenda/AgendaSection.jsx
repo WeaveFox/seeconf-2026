@@ -68,7 +68,7 @@ export default function AgendaSection() {
     // 多分享者头像交替蓝红色
     const result = []
     for (let i = 0; i < maxLen; i++) {
-      const isBlue = (speakerOffset + i) % 2 === 0
+      const isBlue = item.avatarColor ? item.avatarColor === 'blue' : (speakerOffset + i) % 2 === 0
       if (isBlue) {
         result.push(blueArr[i] || redArr[i] || avatarBlue)
       } else {
@@ -110,7 +110,9 @@ export default function AgendaSection() {
 
   const getGlowColor = (localIndex, avatarIdx = 0) => {
     const speakerOffset = globalOffset + speakerIndexMap[localIndex]
-    const isBlue = (speakerOffset + avatarIdx) % 2 === 0
+    const isBlue = currentAgenda[localIndex].avatarColor
+      ? currentAgenda[localIndex].avatarColor === 'blue'
+      : (speakerOffset + avatarIdx) % 2 === 0
     return isBlue ? 'rgba(15, 131, 211, 0.28)' : 'rgba(243, 88, 76, 0.28)'
   }
 
