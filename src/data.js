@@ -240,21 +240,21 @@ export const agendaData = {
   'ai-engineering': [
     {
       time: '14:00 - 14:25',
-      title: '一天一版的工程密码：QoderCLI 如何重塑研发范式',
-      description: 'Coding Agent 加速代码产出的同时，也让质量验证、版本交付与持续演进面临更大压力。本次分享将结合“用 QoderCLI 迭代 QoderCLI”、实现一天一版的实践，介绍如何通过 Harness Engineering，为 Agent 建立贯穿上下文、工具执行、真实环境验证与交付反馈的工程环境。围绕开发、修复、发布与演进四个 Loop，重点展示 Agent 如何操作真实终端完成验证、依据失败证据持续修正，以及如何将代码审查、文档同步和版本发布接入日常流水线。同时，探讨执行状态与历史经验如何跨任务复用、线上信号如何驱动下一轮迭代，以及人在目标、风险与发布决策中的职责边界。',
-      speaker: '姜子玥（安枝）',
-      speakerTitle: '阿里巴巴 · QoderCLI 技术专家',
-      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/2OLiRK6BCFQAAAAAU4AAAAgADiiDAQFr/original',
-      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/17-BS6l1WDsAAAAAVLAAAAgADiiDAQFr/original',
-    },
-    {
-      time: '14:25 - 14:50',
       title: '多模态编程智能体：从看懂界面到完成复杂任务',
       description: '从一张截图生成网页，到理解交互、操作软件并完成复杂任务，多模态智能体正在拓展数字世界中的行动边界。本次分享将结合蚂蚁百灵在多模态Coding 与 Computer Use Agent 方向的探索，介绍智能体如何从界面与交互中理解需求，生成可运行的应用，再通过自主操作、观察结果和持续修正完成复杂任务。围绕“理解—生成—执行—验证”的完整过程，分享模型能力演进中的关键实践与挑战，探讨融合视觉、编程与行动能力的下一代智能体，如何走向真实场景中的可靠交付。',
       speaker: '彭晗（鹏函）',
       speakerTitle: '蚂蚁集团 · 百灵大模型多模态代码负责人',
       avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/alOaRrArSrkAAAAARQAAAAgADiiDAQFr/original',
       avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/r7r1SrPTl7kAAAAARNAAAAgADiiDAQFr/original',
+    },
+    {
+      time: '14:25 - 14:50',
+      title: '一天一版的工程密码：QoderCLI 如何重塑研发范式',
+      description: 'Coding Agent 加速代码产出的同时，也让质量验证、版本交付与持续演进面临更大压力。本次分享将结合“用 QoderCLI 迭代 QoderCLI”、实现一天一版的实践，介绍如何通过 Harness Engineering，为 Agent 建立贯穿上下文、工具执行、真实环境验证与交付反馈的工程环境。围绕开发、修复、发布与演进四个 Loop，重点展示 Agent 如何操作真实终端完成验证、依据失败证据持续修正，以及如何将代码审查、文档同步和版本发布接入日常流水线。同时，探讨执行状态与历史经验如何跨任务复用、线上信号如何驱动下一轮迭代，以及人在目标、风险与发布决策中的职责边界。',
+      speaker: '姜子玥（安枝）',
+      speakerTitle: '阿里巴巴 · QoderCLI 技术专家',
+      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/2OLiRK6BCFQAAAAAU4AAAAgADiiDAQFr/original',
+      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/17-BS6l1WDsAAAAAVLAAAAgADiiDAQFr/original',
     },
     {
       time: '14:50 - 15:15',
