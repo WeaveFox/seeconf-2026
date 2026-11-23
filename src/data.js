@@ -19,6 +19,22 @@ export const navItems = [
   { label: '音乐派对', anchor: 'band' },
   { label: '参会指南', anchor: 'guide' },
   { label: '合作伙伴', anchor: 'partners' },
+  { label: 'FAQ', anchor: 'faq' },
+]
+
+export const faqs = [
+  {
+    question: '我当天有事来不了，可以把票给朋友吗？',
+    answer: '可以，登录百格活动，在<a href="https://www.bagevent.com/personal/v3/event/9280283/login" target="_blank" rel="noopener">个人中心</a>找到自己的门票（需要和手机号保持一致），登录之后就可以去修订参会人员信息。修订完之后这个门票会给到对应的用户，并会有短信通知，延迟约 5 分钟。',
+  },
+  {
+    question: '大会当天如何进入到蚂蚁 A 空间园区？',
+    answer: '注意查收来自蚂蚁集团的短信，按照短信指引，提前完成访客的实名认证，并提前准备好百格小程序中的购票二维码，保证当天无需排队，快速入场。如未收到短信，通过官网底部的二维码加入微信群联系我们。',
+  },
+  {
+    question: '怎么开发票？需要走公司报销。',
+    answer: '进入百格活动小程序，点击「活动」-「订单与发票」-「索要/查看发票信息」，就可以开票了。注意，开发票需要在 2026 年 12 月 4 日前完成。',
+  },
 ]
 
 // 专题列表

@@ -33,22 +33,18 @@ export default function TheNavbar() {
 
   useEffect(() => {
     const updateHashByScroll = () => {
-      const sections = navItems.map(item => ({ id: item.anchor, el: document.getElementById(item.anchor) }))
-      const viewportCenter = window.scrollY + window.innerHeight / 2
+      const sections = [...document.querySelectorAll('main section[id]')]
+        .filter(el => el.id !== 'hero')
+        .map(el => ({ id: el.id, el }))
+      const navbarHeight = navbarRef.current?.offsetHeight ?? 0
+      const scrollPosition = window.scrollY + navbarHeight + 16
       let closest = null
-      let closestDist = Infinity
       for (const s of sections) {
         if (!s.el) continue
-        const top = s.el.offsetTop
-        const bottom = top + s.el.offsetHeight
-        if (viewportCenter >= top && viewportCenter <= bottom) {
+        if (s.el.offsetTop <= scrollPosition) {
           closest = s.id
+        } else {
           break
-        }
-        const dist = Math.min(Math.abs(top - viewportCenter), Math.abs(bottom - viewportCenter))
-        if (dist < closestDist) {
-          closestDist = dist
-          closest = s.id
         }
       }
       if (closest && window.location.hash !== `#${closest}`) {

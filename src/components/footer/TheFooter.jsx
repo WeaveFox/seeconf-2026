@@ -19,6 +19,7 @@ const navColumns = [
       { label: '音乐派对', anchor: 'band' },
       { label: '参会指南', anchor: 'guide' },
       { label: '合作伙伴', anchor: 'partners' },
+      { label: '常见问题', anchor: 'faq' },
     ],
   },
 ]
