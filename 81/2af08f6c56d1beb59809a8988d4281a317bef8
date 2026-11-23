@@ -1,0 +1,22 @@
+src/data.js
+  s_967c6019d8867c::t_31404460f5382b 137-138
+  s_967c6019d8867c::t_8a2e1c8bb08efb 139-141
+src/components/agenda/AgendaSection.jsx
+  s_967c6019d8867c::t_8a2e1c8bb08efb 71,113-115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "812af08f6c56d1beb59809a8988d4281a317bef8",
+  "prompts": {},
+  "sessions": {
+    "s_967c6019d8867c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a206d1-7c61-7b63-8142-daa905e8edaf",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "xudafeng <xudafeng@126.com>"
+    }
+  }
+}
