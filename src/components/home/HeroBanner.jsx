@@ -73,6 +73,7 @@ export default function HeroBanner() {
           <p className={styles['hero-description']}>{conferenceInfo.slogan}</p>
         </div>
         <div className={styles['hero-cta']}>
+          {/* 立即购票按钮已隐藏
           <a
             className={`${styles['hero-buy-btn']} ${urgencyClass}`}
             href={ticketBuyUrl}
@@ -87,6 +88,7 @@ export default function HeroBanner() {
               </span>
             )}
           </a>
+          */}
           <p className={styles['hero-date']}><span className={styles['date-loc']}>杭州 · 蚂蚁 A 空间</span><span className={styles['date-sep']}> / </span>{conferenceInfo.date}</p>
         </div>
       </div>
