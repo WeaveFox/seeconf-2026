@@ -292,12 +292,12 @@ export const agendaData = {
     },
     {
       time: '15:40 - 16:05',
-      title: 'Rstack: 从高性能工具链到 Agent 友好',
-      description: 'Rstack 是一组面向 JavaScript 开发者的高性能工具链，底层基于 Rspack。过去，工具链的服务对象主要是人；而在 Agent 时代，工具链还需要服务于 Agent，这带来了新的挑战，也对工具链的设计提出了更高要求。本次分享将介绍团队在高性能工具链与 Agent 结合方面的探索，并结合 Rspress、SWC-next 的项目开发与 Rstack 生态建设实践，分享相关的设计思路与实践经验。',
-      speaker: '孙奕腾',
-      speakerTitle: '字节跳动 · Web Infra Rstack 团队成员，Rspress 负责人',
-      avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/q8VDT6EiAfEAAAAARPAAAAgADiiDAQFr/original',
-      avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/6GhxR4pTENkAAAAARPAAAAgADiiDAQFr/original',
+      title: '茶歇逛展',
+      description: '',
+      speaker: '',
+      speakerTitle: '',
+      avatarBlue: '',
+      avatarRed: '',
     },
     {
       time: '16:05 - 16:30',
