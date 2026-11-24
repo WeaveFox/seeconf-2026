@@ -74,18 +74,12 @@ export default function HeroBanner() {
         </div>
         <div className={styles['hero-cta']}>
           <a
-            className={`${styles['hero-buy-btn']} ${urgencyClass}`}
-            href={ticketBuyUrl}
-            target="_blank"
+            className={styles['hero-buy-btn']}
+            href="#guide"
             rel="noopener"
             onContextMenu={onControlContextMenu}
           >
-            <span className={styles['btn-label']}>立即购票<span className={styles['btn-arrow']}>↗</span></span>
-            {showCountdown && (
-              <span className={styles['btn-sub']}>
-                <span className={styles['countdown-dot']}></span>{activeTier.name}&nbsp;<b className={styles['btn-price']}>¥{activeTier.price}</b>&nbsp;{activeTier.originalPrice && <s className={styles['btn-price-strike']}>¥{activeTier.originalPrice}</s>}&nbsp;·&nbsp;仅剩&nbsp;{countdown.days > 0 && <span>{countdown.days}&nbsp;天&nbsp;</span>}{pad2(countdown.hours)}:{pad2(countdown.minutes)}:{pad2(countdown.seconds)}
-              </span>
-            )}
+            <span className={styles['btn-label']}>参会指南</span>
           </a>
           <p className={styles['hero-date']}><span className={styles['date-loc']}>杭州 · 蚂蚁 A 空间</span><span className={styles['date-sep']}> / </span>{conferenceInfo.date}</p>
         </div>
