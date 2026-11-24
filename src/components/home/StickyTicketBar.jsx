@@ -67,16 +67,13 @@ export default function StickyTicketBar() {
             </span>
           )}
         </div>
-        {/* 立即购票按钮已隐藏
         <a
-          href={ticketBuyUrl}
-          target="_blank"
+          href="#guide"
           rel="noopener"
-          className={`${styles['bar-buy-btn']} ${isUrgent ? styles.urgent : ''}`}
+          className={styles['bar-buy-btn']}
         >
-          立即购票<span className={styles['bar-arrow']}>↗</span>
+          参会指南
         </a>
-        */}
       </div>
     </div>
   )
