@@ -157,6 +157,10 @@ export default function AgendaSection() {
               <div className={styles['session-card-overlay']}>
                 <p className={styles['session-type']}>{session.name}</p>
                 <h3 className={styles['session-subtitle']}>{session.subtitle}</h3>
+                <p className={styles['session-location']}>
+                  <span className={styles['session-location-label']}>会场</span>
+                  <span>{session.location}</span>
+                </p>
               </div>
             </div>
           ))}

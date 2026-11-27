@@ -43,6 +43,7 @@ export const sessions = [
     id: 'main',
     name: '主会场',
     subtitle: '创造力复兴',
+    location: '报告厅',
     isLive: true,
     color: '#f3584c',
     producers: [{ name: '徐达峰（达峰）', title: '蚂蚁集团 · 平台体验技术部负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/fckbRapByFQAAAAAUKAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/VWIITqdL1_oAAAAAUxAAAAgADiiDAQFr/original' }],
@@ -52,6 +53,7 @@ export const sessions = [
     id: 'ai-experience',
     name: '专题',
     subtitle: 'AI 创新体验',
+    location: '报告厅',
     color: '#0f83d3',
     producers: [
       { name: '张婧', title: '蚂蚁集团 · AI 创新硬件负责人', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/S3JXSYOWYjwAAAAARpAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/tg4aQ5hGgFEAAAAAR5AAAAgADiiDAQFr/original' },
@@ -64,6 +66,7 @@ export const sessions = [
     id: 'ai-engineering',
     name: '专题',
     subtitle: '卓越 AI 工程实践',
+    location: '3-515',
     color: '#12a7df',
     producers: [
       { name: '陈成（云谦）', title: '阿里巴巴 · QoderCLI 高级技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/V9ZWRanRv3EAAAAARqAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/TdnPQ5x4K8MAAAAARoAAAAgADiiDAQFr/original' },
@@ -76,6 +79,7 @@ export const sessions = [
     id: 'ai-interaction',
     name: '专题',
     subtitle: 'AI 新交互与多端',
+    location: '3-516',
     color: '#29bae5',
     producers: [
       { name: '李彦男（竹光）', title: '蚂蚁集团 · 高级技术专家', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/jfkCRqX7woIAAAAARlAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/aL-ZS4FAp1sAAAAAR7AAAAgADiiDAQFr/original' },
@@ -88,6 +92,7 @@ export const sessions = [
     id: 'see-next',
     name: '专题',
     subtitle: 'SEE Next',
+    location: '2-503&504',
     color: '#f3584c',
     producers: [
       { name: '黄挺（鲁直）', title: '蚂蚁集团 · 平台技术事业群总架构师', avatarBlue: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/k5u5QK0pGkoAAAAARmAAAAgADiiDAQFr/original', avatarRed: 'https://mdn.alipayobjects.com/huamei_m96plz/afts/img/mhrQT7zwAjsAAAAAR3AAAAgADiiDAQFr/original' },
