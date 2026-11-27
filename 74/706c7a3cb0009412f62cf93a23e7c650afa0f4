@@ -1,0 +1,30 @@
+src/components/agenda/AgendaSection.module.css
+  s_f7898f3b2c84c9::t_17ee10b9dcd227 623-633
+  s_f7898f3b2c84c9::t_b055164a615cba 83-84
+  s_f7898f3b2c84c9::t_c5efc746bb35df 752-759
+  s_f7898f3b2c84c9::t_5831667527a891 114-129
+src/data.js
+  s_f7898f3b2c84c9::t_a32fbc66c4ebe7 56
+  s_f7898f3b2c84c9::t_82f239ec1ad4f2 46
+  s_f7898f3b2c84c9::t_45df2f8b42655f 95
+  s_f7898f3b2c84c9::t_ebd5308ba74caa 82
+  s_f7898f3b2c84c9::t_5abfe550a8ccce 69
+src/components/agenda/AgendaSection.jsx
+  s_f7898f3b2c84c9::t_93630dac721de7 160-163
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "74706c7a3cb0009412f62cf93a23e7c650afa0f4",
+  "prompts": {},
+  "sessions": {
+    "s_f7898f3b2c84c9": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "330b7bcd-5f8d-4ae6-a410-f4ac755a0900",
+        "model": "codefuse_official_channel/Kimi-K3.1-Pro:glink_domestic"
+      },
+      "human_author": "hustcc <i@hust.cc>"
+    }
+  }
+}
