@@ -1,0 +1,60 @@
+src/components/footer/TheFooter.jsx
+  s_11701853ca5ce2::t_7c3b28bdbddb66 22
+src/components/home/TheNavbar.jsx
+  s_11701853ca5ce2::t_81fd7d2f2a6194 36-38
+  s_11701853ca5ce2::t_1f1d3206f0fa28 39-40,44,46
+src/components/faq/FAQSection.jsx
+  s_11701853ca5ce2::t_6bd5f0cede3a63 1-53,55-56,58-67
+  s_11701853ca5ce2::t_08cbfa1e8f4211 54,57
+src/components/faq/FAQSection.module.css
+  s_11701853ca5ce2::t_7f9a76938183d9 1-2,4-56,62-97,104-144
+  s_11701853ca5ce2::t_3d5eeb0ba288d3 57-61
+  s_11701853ca5ce2::t_243573ce148e12 3
+  s_11701853ca5ce2::t_639053ffe39937 98-103
+src/data.js
+  s_11701853ca5ce2::t_ed597965c193dd 36
+  s_11701853ca5ce2::t_345ad49a7e56cf 22
+  s_11701853ca5ce2::t_c4883781386119 28
+  s_11701853ca5ce2::t_be22cfd1c79927 25-27,29-35,37
+  s_11701853ca5ce2::t_58a8d1366539d8 23-24
+  s_f7898f3b2c84c9::t_a32fbc66c4ebe7 56
+  s_f7898f3b2c84c9::t_82f239ec1ad4f2 46
+  s_f7898f3b2c84c9::t_45df2f8b42655f 95
+  s_f7898f3b2c84c9::t_ebd5308ba74caa 82
+  s_f7898f3b2c84c9::t_5abfe550a8ccce 69
+src/App.jsx
+  s_11701853ca5ce2::t_db02048dc252ac 35
+  s_11701853ca5ce2::t_af8b2b97c98b6c 11
+  s_11701853ca5ce2::t_86c27eb60d9ebb 36
+src/components/agenda/AgendaSection.module.css
+  s_f7898f3b2c84c9::t_17ee10b9dcd227 623-633
+  s_f7898f3b2c84c9::t_b055164a615cba 83-84
+  s_f7898f3b2c84c9::t_c5efc746bb35df 752-759
+  s_f7898f3b2c84c9::t_5831667527a891 114-129
+src/components/agenda/AgendaSection.jsx
+  s_f7898f3b2c84c9::t_93630dac721de7 160-163
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b935347b2139b46ac0449bb74cf491859c1c575a",
+  "prompts": {},
+  "sessions": {
+    "s_11701853ca5ce2": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "c6dccdf6-e02d-41f1-8abf-dc62fef1e000",
+        "model": "codefuse_official_channel/Kimi-K3.1-Pro:glink_domestic"
+      },
+      "human_author": "hustcc <i@hust.cc>"
+    },
+    "s_f7898f3b2c84c9": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "330b7bcd-5f8d-4ae6-a410-f4ac755a0900",
+        "model": "codefuse_official_channel/Kimi-K3.1-Pro:glink_domestic"
+      },
+      "human_author": "hustcc <i@hust.cc>"
+    }
+  }
+}
